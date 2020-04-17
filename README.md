@@ -1,18 +1,114 @@
-# Your Project's Name
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+# Art Of It All - v0.1 - Home Page Styling Complete
+The idea of this is displaying art from different artists for sale. 
+Also, allowing customers to make personal requests for pieces of art they would like made. 
+The site would also be an opportunity to help the artist get a foothold in the industry, 
+for exposure and learning how to handle these types of situations before doing it on their own. 
+The interaction I want for this are:-
+* I'd like to use a market basket API; this hopefully would allow customers to add items to the basket for a later checkout
+* I'd like to use an API that analyses the colour of the picture and suggest colours for walls
+* I'd like to use a Google login API to allow customers to login and checkout with Google Pay
+* I'd like to use an email API to send a response from a submitted form with the information about a job
+* I'd like an API that is a calendar that shows how much work an artist has at the moment, 
+ displaying how long it may take for a customers piece to complete. 
 
 ## UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+This website will have two target audiences. 
+The first is customers who are looking into or wanting to buy art for there home. 
+Also, customers that wish to request their ideas to be made. 
+The other main target is the artists that want to get into the industry who need a little help getting their foot in the door.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+For the customers, the site will be designed with ease of access in mind as much as possible. 
+So, to achieve this, the navigation, login, header and light/dark toggle will be on a bar that sticks to the top of the page, 
+I will do this so when they scroll; they can still navigate, change the theme and login or out without needing to scroll to the top of the page. 
+Also, in the direction of ease of access navigation links to make searching the market place easier will be present to the market navigation tab in a dropdown menu. 
+There will also be a few pages that explain how all these services work so they can read them and to help 
+this there will be a contact form that they can complete to talk to Help department about any issues.
+
+For artists, their art will display on the market page and past requests page. 
+On these pages, there will be a description of the making process, 
+the artist and the artist's thoughts on the piece. 
+These descriptions will help the artist because it will help them learn how to show off their work, 
+learn what types of questions they should be asking themselves when showing off their work and finally 
+will help them start getting noticed in the artist industry. The contact form that customers can use to contact 
+them will help the artist to understand interactions with customers and will help them learn to handle 
+specific requests from customers. By this, I mean learn how to help customers get there idea created while also letting them know what is achievable.
+
+For the design of the page, I will be using the Bootstrap grid method to make the page look organised and well-spaced. 
+It will help with the response to smaller screen sizes for a better layout of all of the features. 
+Also, for the design of the pages, a title will be at the top in the large text. So customers are reassured which page they are on. 
+I hope to reinforce this with the current page highlighted on the navigation.
+
+User Stories:-
+Art enthusiast wants more art for there home; they want more landscapes. 
+They open up on the home page and see a link to "Landscapes for Sale". 
+They click on this and go to the market place with landscapes selected on the filter. 
+They want fantasy designs, so they choose the fantasy filter. 
+They find some pieces they like but want this to look it's best in there home, 
+so they use the wall colour chooser to look at suggestions to paint their wall.
+
+A fan of tattoos wants a personal design done, but they're not sure how to design it themselves. 
+They see "Past Requested Art" and click the link to see what's there. They come across loads of designs; they find a filter for "Tattoos". 
+When they see loads of good designs by one particular artist, they follow the link that says "Please use the Contact page to make personal requests!". 
+They find the artist they want on the dropdown list of artist and write there request out.
+
+Artist starting in the art business, they want to let people know their new art out. 
+They see the social link for the page at the bottom, they click the link for Facebook and join the artist group under the websites Facebook page. 
+They post the new art they have coming out here, and customers see and have a look at their craft.
+
+A customer wants to make a personal request but isn't entirely sure how to go about it, 
+they have managed to navigate to the contact page but is not sure how it should be laid out and not sure about what to say. 
+They see the link for help at the top of the page before the request for; they click the link that leads them to the policies page and see "Request Details" subpage link. 
+They look through the suggestions here on layout and what to say and head back to the contacts page through the navigation to make their request.
+
+An artist gets a request but isn't sure how to handle it. 
+They have managed to navigate to the Policies page and has had a look through its subpages but is still unsure. 
+They then decide to try and get further help, on the Policies page they notice a help link, 
+they follow this which leads to the contact page with the Help department selected in the contact form. 
+They fill this out and are helped with their query. 
 
 ## Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+
+### UX Feature
+* Sticky bar at the top with open button, site title, light/dark toggle and login button
+* Open button and side navigation
+* Light/Dark that changes the theme of the page except for the top bar and the footer
+* Login that will allow people to login with Google
+* Grid method throughout all pages using Bootstrap
+
+### Home Feature
+* Links to the market page that select filter settings, i.e. portrait links to the market page with portraits chose in filters
+* Contact page link 
+* Calendar that can be changed by the name selected on the dropdown list above the picture
+
+### Market Feature
+* Picture of the art displayed in a grid with price over the top of the picture and description underneath the picture
+* A filter section on the right of the page that leaves picture with the correct class and removes the rest
+* Clicking the picture will transition with a zoom in on the clicked image and show more information about the image
+* Constantly updating basket at the top of the page, with a checkout button next to it
+
+### Policies Features
+* Three boxes with information about Policies Terms and Conditions, acceptable requests and service description
+* The last two boxes will link to respective pages with more in-depth information about this
+* The top will open a new page and download a document with more information on this
+
+### Contact Features
+* Link to Policies page for more information before the submitting a form
+* A form with a dropdown for with all the different artist and the help department
+* The form will have a name box for the person using it 
+* The form will have a box that asks for the user's email
+* The form will have a box for the request they want to put in, the text in there before they start typing will be an example
+
+### Past Art Feature
+* Will have a picture of the requested art in a grid
+* Under the pictures will the artist, the buyer and a description
+
+### Checkout feature
+* Will have all the items in the current basket
+* These items will have a ruff description, artist and price
+* A total will be displayed, underneath it will be a total without VAT
+* A checkout/pay button will be under that
+* Finally there will be a link to help page for any queries
 
 ### Existing Features
 Feature 1 - allows users X to achieve Y, by having them fill out Z
@@ -22,13 +118,65 @@ For some/all of your features, you may choose to reference the specific project 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-Another feature idea
+
+#### UX Feature
+* Sticky bar at the top with open button, site title, light/dark toggle and login button
+* Open button and side navigation
+* Light/Dark that changes the theme of the page except for the top bar and the footer
+* Login that will allow people to login with Google
+* Grid method throughout all pages using Bootstrap
+
+#### Home Feature
+* Links to the market page that select filter settings, i.e. portrait links to the market page with portraits chose in filters
+* Contact page link 
+* Calendar that can be changed by the name selected on the dropdown list above the picture
+
+#### Market Feature
+* Picture of the art displayed in a grid with price over the top of the picture and description underneath the picture
+* A filter section on the right of the page that leaves picture with the correct class and removes the rest
+* Clicking the picture will transition with a zoom in on the clicked image and show more information about the image
+* Constantly updating basket at the top of the page, with a checkout button next to it
+
+#### Policies Features
+* Three boxes with information about Policies Terms and Conditions, acceptable requests and service description
+* The last two boxes will link to respective pages with more in-depth information about this
+* The top will open a new page and download a document with more information on this
+
+#### Contact Features
+* Link to Policies page for more information before the submitting a form
+* A form with a dropdown for with all the different artist and the help department
+* The form will have a name box for the person using it 
+* The form will have a box that asks for the user's email
+* The form will have a box for the request they want to put in, the text in there before they start typing will be an example
+
+#### Past Art Feature
+* Will have a picture of the requested art in a grid
+* Under the pictures will the artist, the buyer and a description
+
+#### Checkout feature
+* Will have all the items in the current basket
+* These items will have a ruff description, artist and price
+* A total will be displayed, underneath it will be a total without VAT
+* A checkout/pay button will be under that
+* Finally there will be a link to help page for any queries
 
 ## Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
+### Bootstrap
+Used for the page and specific HTML element styling. Its primary use at the moment is its grid method for page format and look on smaller screens
+
+### JQuery
+Used for more effortless Javascript coding and dom manipulation
+
+### Jasmine
+Used to test Javascript code
+
+### Font-Awesome
+Used for a logo for different navigation links and some titles. Also used for social connections in the footer. Finally used for the dropdown logo on the navigation
+
+### Google Font
+Used for the font families for the whole page
+
 ## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 

@@ -1,23 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.js" integrity="sha256-PePX8Jc4TIxzzVz0Qe4NsH3OUU8+Y49DBWvYgggNqkY=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js" integrity="sha256-qazAASTTgUrq9SOYkPSB3oEuqbhn+2j4kxGkVZ0GKjY=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.js" integrity="sha256-HG8TKl0T65NyELmbUoo0H7/a1e++smYdXXtuuEsyKok=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css" integrity="sha256-YzqdEMEXu1sH1t2Y9tk3XhKhxy1xMWvcA1koZx43k+8=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Art Of It All - Home</title>
+	<!---Link to stylesheets; Bootstrap, Font Awesome and Google Fonts--->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/sketchy/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto+Condensed:ital@1&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css"
+		integrity="sha256-YzqdEMEXu1sH1t2Y9tk3XhKhxy1xMWvcA1koZx43k+8=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<!---Script links for Bootstrap and Jquery--->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<!---Personal Scripts Link--->
+    <script src="assets/js/changeCalendar.js"></script>
+	<script src="assets/js/lightDarkMode.js"></script>
+	<script src="assets/js/sideNavMenu.js"></script>
+	<script src="assets/js/footerResize.js"></script>
+	<!---Side Navigation Menu--->
+	<div id="mySidenav" class="side-nav">
+		<a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+		<a class="active-page" href="index.html">Home</a>
+		<a href="page/about.html">Market</a>
+		<div class="dropdown">
+			<button class="drop-btn"><i class="fas fa-chevron-circle-down"></i></button>
+			<div class="dropdown-content">
+			</div>
+		</div>
+		<a href="page/gaming.html">Contact</a>
+		<a href="page/feats.html">Policies</a>
+	</div>
+	<div class="row hdr">
+		<div class="col-2">
+			<button class="nav-btn" onclick="openNav()">Open</button>
+		</div>
+		<!---Side Navigation Menu End--->
+		<!---Page Title--->
+		<div class="col-8">
+			<h1 class="top-hdr">Art Of It All</h1>
+		</div>
+		<!---Light/Dark Mode Button--->
+		<div class="col-1">
+			<div class="l-d-btn-container">
+				<div class="l-d-name-pos">
+					<p class="l-d-name">Light/Dark</p>
+				</div>
+				<input type="checkbox" id="switch" name="theme" onclick="lightDarkMode()">
+				<label for="switch">Toggle</label>
+			</div>
+		</div>
+		<!---Light/Dark Mode Button End--->
+		<div class="col-1">
+			<div class="fan-login-container">
+				<button class="fan-login" data-toggle="modal" data-target="#loginmodal">Login</button>
+			</div>
+		</div>
+	</div>
 </head>
+
 <body>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+	<div class="top-space"></div>
+	<div class="l-d-container">
+		<h2 class="body-hdr">Home</h2>
+	</div>
+	<div class="l-d-container">
+		<div class="row">
+			<div class="col-md-6 col-12">
+				<div class="row home-container">
+					<img class="home-img" src="assets/img/portraits/picture1.jpg">
+					<img class="home-img" src="assets/img/portraits/paint1.jpg">
+					<img class="home-img" src="assets/img/portraits/abstract1.jpg">
+					<img class="home-img" src="assets/img/portraits/portrait1.jpg">
+					<h3 class="body-hdr center-hdr">Portraits for Sale</h3>
+				</div>
+			</div>
+			<div class="col-md-6 col-12">
+				<div class="row home-container">
+					<img class="home-img-landscape" src="assets/img/landscapes/landscape1.jpg">
+					<img class="home-img-landscape" src="assets/img/landscapes/landscape2.jpg">
+					<img class="home-img-landscape" src="assets/img/landscapes/landscape3.jpg">
+					<img class="home-img-landscape" src="assets/img/landscapes/landscape4.jpg">
+					<h3 class="body-hdr center-hdr">Landscapes for Sale</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-12">
+				<div class="row home-container">
+					<img class="home-img" src="assets/img/manga-cartoons/manga1.jpg">
+					<img class="home-img" src="assets/img/manga-cartoons/manga2.jpg">
+					<img class="home-img" src="assets/img/manga-cartoons/cartoon1.jpg">
+					<img class="home-img" src="assets/img/manga-cartoons/cartoon2.jpg">
+					<h3 class="body-hdr center-hdr">Manga/Cartoons for Sale</h3>
+				</div>
+			</div>
+			<div class="col-md-6 col-12">
+				<div class="row home-container">
+					<img class="home-img" src="assets/img/requests/requested-art1.jpg">
+					<img class="home-img" src="assets/img/requests/requested-art2.jpg">
+					<img class="home-img" src="assets/img/requests/requested-art3.jpg">
+					<img class="home-img" src="assets/img/requests/requested-art4.jpg">
+					<h3 class="body-hdr center-hdr">Past Requested Art</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="l-d-container">
+			<h3 class="body-hdr center-home">Please use the Contact page to make personal requests!</h3>
+			<h2 class="body-hdr center-home"><a href="page/contact.html">Contact Page</a></h2>
+	</div>
+    <div class="l-d-container">
+        <select id="my_select_box">
+            <option value="http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">something</option>
+            <option value="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a.jpeg">something else</option>
+        </select>
+        <img id="my_changing_image" src="http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">
+    </div>
 </body>
+
+<footer>
+	<div id="resizeSmall">
+		<div class="row footer-padding">
+			<div class="col-12">
+				<h5 class="footer-hdr">Social</h5>
+				<div class="row">
+					<ul class="list-inline icon">
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://twitter.com/AJokerxd">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.instagram.com/ajokerxd/">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+								<i class="fab fa-youtube" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+								<i class="fab fa-twitch"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h5 class="footer-hdr">Policies</h5>
+				</div>
+				<div class="row">
+					<ul class="footer-list">
+						<div class="col-12">
+							<li>
+								<a class="footer-text" href="#">Privacy Policy</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h5 class="footer-hdr">Help</h5>
+				</div>
+				<div class="row">
+					<ul class="footer-list">
+						<div class="col-12">
+							<li>
+
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="resizeNormal">
+		<div class="row footer-padding">
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Social</h5>
+				<ul class="list-inline icon">
+					<li class="list-inline-item">
+						<h6 class="footer-text">@AJokerXDArtnCrafts
+							<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">@AJokerxd
+							<a target="_blank" href="https://twitter.com/AJokerxd">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">ajokerxd
+							<a target="_blank" href="https://www.instagram.com/ajokerxd/">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">A-JokerXD
+							<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+								<i class="fab fa-youtube" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">AJokerXDYouTube
+							<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+								<i class="fab fa-twitch"></i>
+							</a>
+						</h6>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Privacy Policy and Terms of Use</h5>
+				<p class="footer-text"></p>
+				<h6 class="footer-hdr">For more information see here -
+					<br><a class="footer-text" href="#">Privacy Policy</a>
+			</div>
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Help</h5>
+				<p class="footer-text">
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+	var screenQueryNormal = window.matchMedia("(max-width: 812px)")
+    footerResizeNormal(screenQueryNormal)
+    screenQueryNormal.addListener(footerResizeNormal)
+    var screenQuerySmall = window.matchMedia("(max-width: 812px)")
+    footerResizeSmall(screenQuerySmall)
+    screenQuerySmall.addListener(footerResizeSmall)
+</script>
+
 </html>
