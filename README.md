@@ -1,4 +1,4 @@
-# Art Of It All - v0.1 - Home Page Styling Complete
+# Art Of It All - v0.2 - Photos, Home Finished and Other Pages Added
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -111,11 +111,87 @@ They fill this out and are helped with their query.
 * Finally there will be a link to help page for any queries
 
 ### Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+#### UX Feature
+
+##### Open button and side navigation
+
+Open button - allows the user to press it and open a navigation that comes accross the side of the left hand side of the page/
+To do this the Javascript code [sideNavMenu.js](assets/js/sideNavMenu.js) was written. It has two simple functions in it, 
+the first is openNav() which sets the width of the side navigation div to 250px and does this with a transition for a smoother movement. 
+The second is closeNav() which does the opsite.
+Side Navigation - allows user to navigate to the other pages on the website, by clicking the page names on this side bar/
+The headers on this div are wrapped in anchor links to the other pages allowing navigation.
+
+##### Light/Dark Toggle
+
+Light/Dark button - the user can change the theme of the page between a lighter and a darker theme, 
+they do this by clicking the toggle button on the top headers
+The Javascript code [lightDarkMode.js](assets/js/lightDarkMode.js) controls this and 
+the button is styled in the [style.css](assets/css/style.css) with the class l-d-btn.
+```javascript
+if (this.checked) {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'dark')
+        } else {
+            trans()
+            document.documentElement.setAttribute('data-theme', 'light')
+        }
+```
+This code uses an event listener to see if the box has been clicked and if its checked it changes the data-theme to dark.
+These have css rules linked to them which change the pages apperance. 
+And I use a transiton so background and headers change first then text follows soon after.
+
+##### Grid method throughout all pages using Bootstrap
+To keep a consitant size between all the pages and between the screen sizes I have used Bootstrap grid method to layout my pages, 
+these are in light/dark containers so there style can be changed by the light/dark toggle.
+
+#### Home Feature
+
+##### Contact page link
+This is simply done by h3 with some text above a h2 which is wrapped in an anchor link to the contact page.
+
+##### Calendar
+Artist Selector - the user can select the calendar of the artist they want, they do this by selecting the artist from a dropdown list
+This is done by the [calendar.js](assets/js/calendar.js). All the calendar are hidden till a choice is made. 
+The js waits till the document is ready then builds calendars for all the artist on the list with the data in the js folder, 
+things like events, working times and days off stored as an object in the function.
+```javascript
+$(document).ready(function () {
+    var calendarElmt = document.getElementById("show-artist10")
+
+    var calendar = new FullCalendar.Calendar(calendarElmt, {
+        plugins: ['dayGrid'],
+        events: [
+            {
+                id: 'a',
+                title: 'Personal Time',
+                daysOfWeek:[ 1, 2],
+            },
+            {
+                id: 'a',
+                title: 'Public Piece',
+                start: '2020-04-21',
+                end: '2020-04-26',
+            }
+        ]
+    });
+
+    calendar.render();
+});
+```
+This is the code from the FullCalendar libary, with the events I want set for each artist./
+Then my code waits for a change in the selectors value and sets the display of the choosen option to show and hides the previous selection if there was one.
+```javascript
+$(document).ready(function () {
+    $("div.calendar").hide()
+    $('#changeCalendar').on('change', function () {
+        var chosenOption = $(this).val();
+        $("div.calendar").hide();
+        $("#show" + chosenOption).show();
+    });
+});
+```
 
 ### Features Left to Implement
 
@@ -177,6 +253,9 @@ Used for a logo for different navigation links and some titles. Also used for so
 ### Google Font
 Used for the font families for the whole page
 
+### FullCalendar
+I have used this to add a calendar to the bottom of the home page to show how busy artists are at the moment
+
 ## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -207,8 +286,61 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 Content
-The text for section Y was copied from the Wikipedia article Z
+I have used lorem for description text to save time for better development
+
 Media
-The photos used in this site were obtained from ...
+The pictures for this page where obtained from Google search 
+[paint1.jpg](assets/img/portraits/paint1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/327707310359626455/?autologin=true) 
+and it says it's by Nikos Gyftakis./
+[paint3.jpg](assets/img/portraits/paint3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/216032113352265032/) 
+and it says it's by Joshua Miels.
+[paint2.jpg](assets/img/portraits/paint2.jpg) was on [artnet news](https://news.artnet.com/art-world/art-history-through-perfect365-app-321640) 
+and it says it's by Brian Boucher./
+[portrait2.jpg](assets/img/portraits/portrait2.jpg) was on [Anna Bregman personal site](https://annabregmanportraits.co.uk/pencil-portraits/) 
+and it says it's by Anna Bregman./
+[portrait3.jpg](assets/img/portraits/portrait3.jpg) was on [Pencil Sketch Portraits](https://www.pencilsketchportraits.co.uk/baby-drawings/) 
+and it says it's by Angela, no last name stated./
+[manga1.jpg](assets/img/manga-cartoons/manga1.jpg) was on [My Anime List](https://myanimelist.net/featured/2070/The_Top_14_Series_With_The_Best_Manga_Artwork_Ever) 
+and it says it's by Takeshi Obata./
+[manga2.jpg](assets/img/manga-cartoons/manga2.jpg) was on [Ebay](https://www.ebay.com/itm/C95-CANVAS-En-Morikura-Doujinshi-Fuyu-no-Onnanoko-/323627641814) 
+and I can't tell who it is by./
+[manga3.jpg](assets/img/manga-cartoons/manga3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/517984394621954627/) 
+and I can't tell who it is by./
+[portrait1.jpg](assets/img/portraits/portrait1.jpg) was on [Rita Kirkman Drawings](https://www.ritakirkmandrawings.com/) 
+and it says it's by Rita Kirkman./
+[abstract1.jpg](assets/img/portraits/abstract1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/328903579035102913/) 
+and it doesn't say who it is by./
+[abstract2.jpg](assets/img/portraits/abstract2.jpg) was on [Fine Art America](https://fineartamerica.com/featured/abstract-portrait-rani-s-manik.html) 
+and it says it's by Rani S Manik./
+[abstract3.jpg](assets/img/portraits/abstract3.jpg) was on [Kent Paulette personal page](https://www.kentpaulette.com/product/taylor-swift/) 
+and it says it's by Kent Paulette./
+[cartoon1.jpg](assets/img/manga-cartoons/cartoon1.jpg) was on [Clipart Library](http://clipart-library.com/free/cartoon-cat-png.html) 
+and it doesn't say who it is by./
+[cartoon3.jpg](assets/img/manga-cartoons/cartoon3.jpg) was on [Fiverr](https://www.fiverr.com/shalemsingh/create-cool-cartoon-avatars) 
+and it says it's by shalemsingh(screen name)./
+[cartoon2.jpg](assets/img/manga-cartoons/cartoon2.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/25051341657469044/) 
+and it doesn't say who it is by./
+[landscape1.jpg](assets/img/landscapes/landscape1.jpg) was on [My Modern Met](https://mymodernmet.com/polygon-art-landscape-paintings-elyse-dodge/) 
+and it says it's by Emma Taggart./
+[landscape2.jpg](assets/img/landscapes/landscape2.jpg) was on [Fiverr](https://www.fiverr.com/tamajoshi/paint-you-a-beautiful-pixel-art-landscape) 
+and it says it's by tamajoshi(screen name)./
+[landscape3.jpg](assets/img/landscapes/landscape3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/467881848786061919/) 
+and it says it's by Paintings By Justin./
+[landscape4.jpg](assets/img/landscapes/landscape4.jpg) was on [Pixels](https://www.pexels.com/search/landscape/) 
+and it says it's by Pok Rie./
+[picture1.jpg](assets/img/portraits/portrait1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/409194316117415873/) 
+and it says it's by Steven Saillant./
+[picture2.jpg](assets/img/portraits/portrait2.jpg) was on [techradar](https://www.techradar.com/how-to/photography-video-capture/cameras/77-photography-techniques-tips-and-tricks-for-taking-pictures-of-anything-1320768) 
+and it doesn't say who it is by./
+[picture3.jpg](assets/img/portraits/portrait3.jpg) was on [Skylum](https://skylum.com/how-to/how-to-photoshop-someone-into-picture) 
+and it doesn't say who it is by./
+[requested-art2.jpg](assets/img/requests/requested-art2.jpg) was on [Template.Net](https://www.template.net/design-templates/art/cool-art/) 
+and it doesn't say who it is by./
+[requested-art1.jpg](assets/img/requests/requested-art1.jpg) was on [Funny Junk](https://funnyjunk.com/Cool+art+by+a+friend/funny-pictures/5631723/) 
+and I think it's by glasswall but I'm not sure./
+[requested-art3.jpg](assets/img/requests/requested-art3.jpg) was on [Unreality Mag](https://unrealitymag.com/a-cool-but-bizarre-gallery-of-super-mario-bros-fan-art/) 
+and it says it is by Madison, no last name is stated./
+[requested-art4.jpg](assets/img/requests/requested-art4.jpg) was on [Ebay](https://www.ebay.co.uk/itm/Watercolor-Pop-Art-Eye-Ball-Zombie-Rainbow-Wet-Paint-Graffiti-Cool-3-Sticker-/113734900026) 
+and it doesn't say who it is by./
+
 Acknowledgements
-I received inspiration for this project from X

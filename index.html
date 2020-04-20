@@ -7,38 +7,21 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Art Of It All - Home</title>
 	<!---Link to stylesheets; Bootstrap, Font Awesome and Google Fonts--->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.4.1/sketchy/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-	<link rel="stylesheet" href="style.css">
+	<link href='node_modules/fullcalendar/core/main.css' rel='stylesheet' />
+	<link href='node_modules/fullcalendar/daygrid/main.css' rel='stylesheet' />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto+Condensed:ital@1&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css"
-		integrity="sha256-YzqdEMEXu1sH1t2Y9tk3XhKhxy1xMWvcA1koZx43k+8=" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<!---Script links for Bootstrap and Jquery--->
-	<script src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+	<script src='node_modules/fullcalendar/core/main.js'></script>
+	<script src='node_modules/fullcalendar/daygrid/main.js'></script>
+	<script src="https://kit.fontawesome.com/5c3d3d9c4a.js" crossorigin="anonymous"></script>
+	<script src="node_modules/jquery/dist/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+		crossorigin="anonymous"></script>
 	<!---Personal Scripts Link--->
-    <script src="assets/js/changeCalendar.js"></script>
+	<script src="assets/js/calendar.js"></script>
 	<script src="assets/js/lightDarkMode.js"></script>
 	<script src="assets/js/sideNavMenu.js"></script>
 	<script src="assets/js/footerResize.js"></script>
@@ -46,14 +29,14 @@
 	<div id="mySidenav" class="side-nav">
 		<a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
 		<a class="active-page" href="index.html">Home</a>
-		<a href="page/about.html">Market</a>
+		<a href="page/market.html">Market</a>
 		<div class="dropdown">
 			<button class="drop-btn"><i class="fas fa-chevron-circle-down"></i></button>
 			<div class="dropdown-content">
 			</div>
 		</div>
-		<a href="page/gaming.html">Contact</a>
-		<a href="page/feats.html">Policies</a>
+		<a href="page/contact.html">Contact</a>
+		<a href="page/policies.html">Policies</a>
 	</div>
 	<div class="row hdr">
 		<div class="col-2">
@@ -70,8 +53,8 @@
 				<div class="l-d-name-pos">
 					<p class="l-d-name">Light/Dark</p>
 				</div>
-				<input type="checkbox" id="switch" name="theme" onclick="lightDarkMode()">
-				<label for="switch">Toggle</label>
+				<input class="l-d-btn" type="checkbox" id="switch" name="theme" onclick="lightDarkMode()">
+				<label class="l-d-label" for="switch">Toggle</label>
 			</div>
 		</div>
 		<!---Light/Dark Mode Button End--->
@@ -90,7 +73,7 @@
 	</div>
 	<div class="l-d-container">
 		<div class="row">
-			<div class="col-md-6 col-12">
+			<div class="col-md-6">
 				<div class="row home-container">
 					<img class="home-img" src="assets/img/portraits/picture1.jpg">
 					<img class="home-img" src="assets/img/portraits/paint1.jpg">
@@ -99,7 +82,7 @@
 					<h3 class="body-hdr center-hdr">Portraits for Sale</h3>
 				</div>
 			</div>
-			<div class="col-md-6 col-12">
+			<div class="col-md-6">
 				<div class="row home-container">
 					<img class="home-img-landscape" src="assets/img/landscapes/landscape1.jpg">
 					<img class="home-img-landscape" src="assets/img/landscapes/landscape2.jpg">
@@ -110,7 +93,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6 col-12">
+			<div class="col-md-6">
 				<div class="row home-container">
 					<img class="home-img" src="assets/img/manga-cartoons/manga1.jpg">
 					<img class="home-img" src="assets/img/manga-cartoons/manga2.jpg">
@@ -119,7 +102,7 @@
 					<h3 class="body-hdr center-hdr">Manga/Cartoons for Sale</h3>
 				</div>
 			</div>
-			<div class="col-md-6 col-12">
+			<div class="col-md-6">
 				<div class="row home-container">
 					<img class="home-img" src="assets/img/requests/requested-art1.jpg">
 					<img class="home-img" src="assets/img/requests/requested-art2.jpg">
@@ -131,16 +114,77 @@
 		</div>
 	</div>
 	<div class="l-d-container">
-			<h3 class="body-hdr center-home">Please use the Contact page to make personal requests!</h3>
-			<h2 class="body-hdr center-home"><a href="page/contact.html">Contact Page</a></h2>
+		<h3 class="body-hdr center-home">Please use the Contact page to make personal requests!</h3>
+		<h2 class="body-hdr center-home"><a href="page/contact.html">Contact Page</a></h2>
 	</div>
-    <div class="l-d-container">
-        <select id="my_select_box">
-            <option value="http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">something</option>
-            <option value="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a.jpeg">something else</option>
+	<div class="l-d-container">
+		<h2 class="body-hdr">Select the artist you like to see how busy they are right now!</h2>
+		<select id="changeCalendar">
+	        <option>Select Option</option>
+	        <option value="-artist1">Artist Name 1</option>
+	        <option value="-artist2">Artist Name 2</option>
+	        <option value="-artist3">Artist Name 3</option>
+	        <option value="-artist4">Artist Name 4</option>
+	        <option value="-artist5">Artist Name 5</option>
+            <option value="-artist6">Artist Name 6</option>
+	        <option value="-artist7">Artist Name 7</option>
+	        <option value="-artist8">Artist Name 8</option>
+	        <option value="-artist9">Artist Name 9</option>
+	        <option value="-artist10">Artist Name 10</option>
         </select>
-        <img id="my_changing_image" src="http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg">
-    </div>
+		<div class="calendar-container">
+			<div id="show-artist1" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 1 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist2" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 2 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist3" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 3 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist4" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 4 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist5" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 5 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist6" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 6 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist7" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 7 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist8" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 8 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist9" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 9 Name</h2>
+				</div>
+			</div>
+			<div id="show-artist10" class="calendar">
+				<div class="l-d-container">
+					<h2 class="body-hdr center-hdr">Artist 10 Name</h2>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 <footer>

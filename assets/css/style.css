@@ -1,1 +1,659 @@
+/*Side Navigation Menu */
+.side-nav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
 
+.side-nav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav .close-btn{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav-btn{
+    border: double;
+    border-radius: 25%;
+    margin:1.5vw;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Drop Down Page Index*/
+.drop-btn{
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background-color: #111;
+}
+
+.dropdown{
+  position: relative;
+  left: 130px;
+  bottom: 45px;
+  width: 0;
+  height: 0;
+}
+
+.dropdown-content{
+  display: none;
+  position: fixed;
+  background-color: #2d2d2d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  color: #f1f1f1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/*Login/Sign Up*/
+.fan-login-container{
+    float: right;
+}
+
+.fan-login{
+    margin: 0.3vw;
+    margin-top: 1.2vw;
+    width: 60px;
+}
+
+/*Header*/
+.hdr{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.top-hdr{
+    font-size: 3vw;
+    margin: 0.5vw;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+/*Light/Dark Mode Button*/
+.l-d-btn-container{
+    position: absolute;
+    bottom: 1.5vw;
+    left: 5vw;
+}
+
+.l-d-btn{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.l-d-label{
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+.l-d-label::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+/*Light/Dark Mode Transition*/
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/*Hover Effect*/
+.side-nav a:hover{
+  color: #f1f1f1;/*This will change the color of the links when they are hovered over*/
+}
+
+.dropdown-content a:hover{
+    background-color: rgb(37, 37, 37);/*This will change the color of the links when they are hovered over*/
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;/*This allows the dropdown menu to show on hover*/
+}
+
+/*Body*/
+.center-hdr{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login{
+    list-style: none;
+}
+
+.top-space{
+    margin-top: 8vw;
+}
+
+html[data-theme="light"]{
+    --bg: #fcfcfc;
+    --bg-panel: #ebebeb;
+    --color-hdr: black;
+    --color-text: black;
+}
+
+html[data-theme="dark"]{
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-hdr: white;
+    --color-text: white;
+}
+
+body{
+    background-color: var(--bg);
+}
+
+.l-d-name-pos{
+    position: absolute;
+}
+
+.l-d-name{
+    color: white;
+    position: absolute;
+    font-size: 17px;
+    right: 10px;
+    top: 3px;
+    font-family: 'Gotu', sans-serif;
+}
+
+.l-d-container{
+    background-color: var(--bg-panel);
+    margin: 2vw;
+    padding: 2vw;
+}
+
+.body-hdr{
+    color: var(--color-hdr);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.body-text{
+    color: var(--color-text);
+    font-family: 'Gotu', sans-serif;
+}
+
+.body-text a{
+    color: var(--color-text);
+    font-family: 'Gotu', sans-serif;
+}
+
+.txt-shadow{
+	background-color: #000000ba;
+}
+
+/*Home Styling*/
+#my_changing_image{
+    width: 10vw;
+}
+
+.center-home{
+    text-align: center;
+}
+
+.center-home a{
+    color: var(--color-hdr);
+}
+
+.home-container{
+    background-color: #0000006b;
+    margin: 1vw;
+    height: 25rem;
+}
+
+.home-img{    
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 25%;
+}
+
+.home-img-landscape{    
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    width: 40%;
+}
+
+.calendar-container{    
+    background-color: #e0e0e0;
+    padding: 20px;
+}
+
+/*Market Styling*/
+.market-image{
+    width: 20vw;
+}
+
+.market-container{
+    margin: 0.5vw;
+    padding: 5px;
+    text-align: center;
+}
+
+.filters{ 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.market-text{
+    display: inline;
+}
+
+/*Example Sale Page Styling*/
+.sale-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+/*Footer*/
+footer{
+    background-color: #202020;
+    color: #fafafa;
+    margin: 0;
+}
+
+.footer-text{
+    color: white;
+    font-family: 'Gotu', sans-serif
+}
+
+.footer-text a{
+    color: white;
+    font-family: 'Gotu', sans-serif
+}
+
+.footer-list{
+    list-style: none;
+}
+
+.footer-hdr{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-padding{
+    margin: 10px;
+}
+
+.icon{
+    padding-bottom: 15px;
+}
+
+.icon li a i{
+    width: 40px;
+    height: 40px;
+    padding: 16px 0;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 7px;
+    text-align: center;
+    background: #8f8f8f;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.fa-facebook{
+	color: #2C76FF;
+}
+
+.fa-twitter{
+	color: #63ECFF;
+}
+
+.fa-instagram{
+	color: black;
+}
+
+.fa-youtube{
+	color: #FF3930;
+}
+
+.fa-twitch{
+	color: #BC48C2;
+}
+
+.icon li a i:hover{
+    background: #404040;
+}
+
+#footer-details{
+    padding: 20px;
+}
+
+.footer-resize-small{
+    display: none;
+}
+.footer-resize-normal{
+    display: none;
+}
+
+/*Media Query*/
+
+@media screen and (max-width: 1366px){
+    .l-d-btn-container{
+        bottom: 1.5vw;
+        left: 4vw;
+    }
+    .l-d-name-pos{
+        bottom: 35px;
+    }
+    .home-container {
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 1112px) and (min-width: 1024px){
+    .l-d-btn-container{
+        left: 2vw;
+        bottom: 0.5vw;
+    }
+    .nav-btn{
+        margin-top: 0.6vw;
+    }
+    .home-container {
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .l-d-btn-container{
+        bottom: 0.5vw;
+        left: 3vw;
+    }
+    .l-d-name-pos{
+        bottom: 3vw;
+        right: 4.5vw;
+    }
+    .home-container {
+        height: 15rem;
+    }
+    .fan-login-container{
+        margin-top: 0vw;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .l-d-name-pos{
+        right: 5vw;
+        bottom: 3.5vw;
+    }
+    .l-d-btn-container{
+        bottom: 1.5vw;
+        left: -1vw;
+    }
+    .fan-login-container{
+        margin-top: 0vw;
+    }
+}
+
+@media screen and (max-width: 834px){
+    .l-d-btn-container{
+        bottom: 34px;
+        left: 0vw;
+    }
+    .l-d-name-pos {
+        right: -2vw;
+    }
+    .top-hdr{
+        margin: 1.5vw;
+        font-size: 8vw;
+    }
+    .top-space{
+        margin-top: 16vw;
+    }
+    .l-d-name{
+        right: 9vw;
+    }
+    .nav-btn{
+        margin-top: 3.5vw;
+        font-size: 20px;
+    }
+    .home-container {
+        height: 12rem;
+    }
+    .fan-login-container{
+        margin-top: 3vw;
+    }
+    .market-text{
+        display: none;
+    }
+    .filters{
+        font-size: 2.5vw;
+    }
+    .l-d-container {
+        margin: 2vw 0vw;
+    }
+}
+
+@media screen and (max-width: 812px){
+    .top-space{
+        margin-top: 20vw;
+    }
+    .l-d-btn-container{
+        right: 10vw;
+        bottom: 4vw;
+        left: 6vw;
+    }
+    .nav-btn{
+        margin: 3vw;
+    }
+    .fan-login-container{
+        margin-top: 3vw;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .home-container {
+        height: 20rem;
+    }
+    .l-d-btn-container{
+        left: 103px;
+        bottom: -0.5vw;
+    }
+    .l-d-name-pos{
+        right: -1vw;
+        bottom: 5vw;
+    }
+    .fan-login{
+        margin-top: -0.8vw;
+    }
+}
+
+@media screen and (max-width: 731px){
+    .l-d-name-pos{
+        right: 0vw;
+        bottom: 5vw;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .l-d-btn-container{
+        top: 4vw;
+        left: 13vw;
+        bottom: -0.2vw;
+    }
+    .home-container{
+        height: 17rem;
+    }
+    .fan-login-container{
+        margin-top: 0;
+    }
+    .l-d-name-pos{
+        bottom: 5vw;
+        right: 1vw;
+    }
+    .body-hdr{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 568px){
+    .l-d-btn-container{
+        bottom: 3vw;
+        top: 3vw;
+    }
+    .home-container {
+        height: 15rem;
+    }
+    .l-d-name-pos{
+        bottom: 3vw;
+        right: 4vw
+    }
+}
+
+@media screen and (max-height: 450px){
+    .side-nav{
+      padding-top: 15px;
+    }
+    .side-nav a{
+      font-size: 18px;
+    }
+    .dropdown{
+        bottom: 35px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .l-d-name{
+        font-size: 15px;
+    }
+    .l-d-btn-container{
+        bottom: 1px;
+        left: 12vw;
+    }
+    .l-d-name-pos{
+        right: 4vw;
+        bottom: 9vw;
+    }
+}
+
+@media screen and (max-width: 411px){
+    .home-container {
+        height: 11rem;
+    }
+    .l-d-btn-container{
+        bottom: 1px;
+    }
+    .top-space{
+        margin-top: 25vw;
+    }
+    .fan-login{
+        margin-top: 0.2vw;
+    }
+    .l-d-name{
+        font-size: 15px;
+    }
+    .l-d-name-pos{
+        right: 6vw;
+        bottom: 6.8vw;
+    }
+    .filter-container{
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .l-d-btn-container{
+        bottom: 1px;
+        top: 3vw;
+    }
+    .l-d-name{
+        font-size: 12px;
+    }
+}    
+
+@media screen and (max-width: 360px){
+    .top-space{
+        margin-top: 31vw;
+    }
+    .fan-login{
+        margin-top: 0.2vw;
+    }
+    .l-d-name{
+        font-size: 12px;
+    }
+    .l-d-name-pos{
+        right: 9vw;
+        bottom: 6vw;
+    }
+    .l-d-btn-container{
+        left: 12vw;
+        bottom: 0px;
+        top: 2.2vw;
+    }
+    .body-hdr {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .top-space{
+        margin-top: 25vw;
+    }
+    .fan-login{
+        margin-top: 0.2vw;
+    }
+    .l-d-name{
+        font-size: 10px;
+    }
+    .l-d-btn-container{
+        bottom: 0px;
+    }
+}
