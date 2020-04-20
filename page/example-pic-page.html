@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Art Of It All - Home</title>
+	<!---Link to stylesheets; Bootstrap, Font Awesome and Google Fonts--->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto+Condensed:ital@1&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<!---Script links for Bootstrap and Jquery--->
+	<script src="https://kit.fontawesome.com/5c3d3d9c4a.js" crossorigin="anonymous"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"
+		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<!---Personal Scripts Link--->
+	<script src="../assets/js/lightDarkMode.js"></script>
+	<script src="../assets/js/sideNavMenu.js"></script>
+	<script src="../assets/js/footerResize.js"></script>
+	<!---Side Navigation Menu--->
+	<div id="mySidenav" class="side-nav">
+		<a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+		<a class="active-page" href="../index.html">Home</a>
+		<a href="market.html">Market</a>
+		<div class="dropdown">
+			<button class="drop-btn"><i class="fas fa-chevron-circle-down"></i></button>
+			<div class="dropdown-content">
+			</div>
+		</div>
+		<a href="contact.html">Contact</a>
+		<a href="policies.html">Policies, Requests and Services</a>
+	</div>
+	<div class="row hdr">
+		<div class="col-2">
+			<button class="nav-btn" onclick="openNav()">Open</button>
+		</div>
+		<!---Side Navigation Menu End--->
+		<!---Page Title--->
+		<div class="col-8">
+			<h1 class="top-hdr">Art Of It All</h1>
+		</div>
+		<!---Light/Dark Mode Button--->
+		<div class="col-1">
+			<div class="l-d-btn-container">
+				<div class="l-d-name-pos">
+					<p class="l-d-name">Light/Dark</p>
+				</div>
+				<input class="l-d-btn" type="checkbox" id="switch" name="theme" onclick="lightDarkMode()">
+				<label class="l-d-label" for="switch">Toggle</label>
+			</div>
+		</div>
+		<!---Light/Dark Mode Button End--->
+		<div class="col-1">
+			<div class="fan-login-container">
+				<button class="fan-login" data-toggle="modal" data-target="#loginmodal">Login</button>
+			</div>
+		</div>
+	</div>
+</head>
+
+<body>
+	<div class="top-space"></div>
+	<div class="l-d-container">
+		<h2 class="body-hdr">Images Name - Artist Name</h2>
+	</div>
+	<div class="l-d-container">
+		<div class="sale-img">
+			<img src="../assets/img/landscapes/landscape3.jpg">
+        </div>
+		</div>
+		<div class="l-d-container">
+			<h3 class="body-hdr">Artist Name: Jane Doe</h3>
+			<h3 class="body-hdr">Date Made: 1st June 2019</h3>
+			<h3 class="body-hdr">Price: £100</h3>
+			<h4 class="body-hdr">Description:</h4>
+			<p class="body-hdr">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+			</p>
+		</div>
+</body>
+
+<footer>
+	<div id="resizeSmall">
+		<div class="row footer-padding">
+			<div class="col-12">
+				<h5 class="footer-hdr">Social</h5>
+				<div class="row">
+					<ul class="list-inline icon">
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://twitter.com/AJokerxd">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.instagram.com/ajokerxd/">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+								<i class="fab fa-youtube" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+								<i class="fab fa-twitch"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h5 class="footer-hdr">Policies</h5>
+				</div>
+				<div class="row">
+					<ul class="footer-list">
+						<div class="col-12">
+							<li>
+								<a class="footer-text" href="#">Privacy Policy</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h5 class="footer-hdr">Help</h5>
+				</div>
+				<div class="row">
+					<ul class="footer-list">
+						<div class="col-12">
+							<li>
+
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="resizeNormal">
+		<div class="row footer-padding">
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Social</h5>
+				<ul class="list-inline icon">
+					<li class="list-inline-item">
+						<h6 class="footer-text">@AJokerXDArtnCrafts
+							<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">@AJokerxd
+							<a target="_blank" href="https://twitter.com/AJokerxd">
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">ajokerxd
+							<a target="_blank" href="https://www.instagram.com/ajokerxd/">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">A-JokerXD
+							<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+								<i class="fab fa-youtube" aria-hidden="true"></i>
+							</a>
+						</h6>
+					</li>
+					<li class="list-inline-item">
+						<h6 class="footer-text">AJokerXDYouTube
+							<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+								<i class="fab fa-twitch"></i>
+							</a>
+						</h6>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Privacy Policy and Terms of Use</h5>
+				<p class="footer-text"></p>
+				<h6 class="footer-hdr">For more information see here -
+					<br><a class="footer-text" href="#">Privacy Policy</a>
+			</div>
+			<div class="col-sm-4">
+				<h5 class="footer-hdr">Help</h5>
+				<p class="footer-text">
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+	var screenQueryNormal = window.matchMedia("(max-width: 812px)")
+    footerResizeNormal(screenQueryNormal)
+    screenQueryNormal.addListener(footerResizeNormal)
+    var screenQuerySmall = window.matchMedia("(max-width: 812px)")
+    footerResizeSmall(screenQuerySmall)
+    screenQuerySmall.addListener(footerResizeSmall)
+</script>
+
+</html>

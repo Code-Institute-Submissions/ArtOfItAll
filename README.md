@@ -1,4 +1,4 @@
-# Art Of It All - v0.2 - Photos, Home Finished and Other Pages Added
+# Art Of It All - v0.3 - Market Page Content Added
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -192,6 +192,49 @@ $(document).ready(function () {
     });
 });
 ```
+#### Market Feature
+
+##### Picture of the art displayed in a grid
+This is done with Bootstrap, there are 4 colums, 3 are the pictures and one of them is the filter. 
+I have decide to not have the price displayed over the top because on smaller screen sizes it didn't look right.
+
+##### A filter
+Filter - the user wants only specific images displayed, to do this they click the ones they want to keep
+Currently this only works if you select and deselect the ones you don't want on the page,
+also because of the way the page is layed out the pictures stay in the same position, 
+if the ones above them go they will move up but not sideways.
+![alt text](assets/img/examples/example-img1.jpg "example image 1 can be found in the assets/img/exaples file")
+![alt text](assets/img/examples/example-img2.jpg "example image 1 can be found in the assets/img/exaples file")
+The way this works it that it when clicked sends in the checkboxs current value and the name asscoiated with the selected box.
+```html
+<li>
+	<label for="chck-box1">Abstract</label>
+	<input type="checkbox" id="chck-box1" onclick="marketFilterAbst(this,'abstract')">
+</li>
+```
+Then the function takes these values in and checks wheather the checkboxs value is checked or not,
+if its checked the function takes the second value entered and uses this to go through all the images with this class name and set them to block, i.e set them visble.
+If it's not selected it will set its display to none to hide all of them.
+```javascript
+function marketFilterAbst(chckbox, abstract) {
+    if (chckbox.checked == true) {
+        var elems = document.getElementsByClassName(abstract);
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].style.display = "block";;
+        }
+        
+    } else {
+        var elems = document.getElementsByClassName(abstract);
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].style.display = "none";;
+        }
+    }
+}
+```
+
+###### Clicking the picture
+More information - the user wants more information about the image, they can click them image to be transfered to a page with more information about it
+Currently the links all lead to the same page but in a fully developed version they would all lead to an individual page about the selected picture
 
 ### Features Left to Implement
 

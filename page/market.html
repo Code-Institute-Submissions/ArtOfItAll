@@ -64,7 +64,269 @@
 </head>
 
 <body>
-	
+	<div class="top-space"></div>
+	<div class="l-d-container">
+		<h2 class="body-hdr">Market</h2>
+	</div>
+    <div class="l-d-container">
+		<h2 class="body-hdr">Basket <i class="fas fa-shopping-basket"></i></h2>
+	</div>
+	<div class="l-d-container">
+		<div class="row">
+			<div class="col-3 market-container">
+				<div class="container landscape">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/landscapes/landscape1.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container landscape">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/landscapes/landscape2.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container landscape">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/landscapes/landscape3.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-2">
+                <div class="filter-container">
+				<h2 class="body-hdr">Filters</h2>
+				<div class="body-text">
+					<ul class="filters">
+						<li>
+							<label for="chck-box1">Abstract</label>
+							<input type="checkbox" id="chck-box1" onclick="marketFilterAbst(this,'abstract')">
+                        </li>
+						<li>
+							<label for="chck-box2">Cartoon</label>
+							<input type="checkbox" id="chck-box2" onclick="marketFilterCart(this,'cartoon')">
+                        </li>
+						<li>
+							<label for="chck-box3">Landscape</label>
+							<input type="checkbox" id="chck-box3" onclick="marketFilterLndscp(this,'landscape')">
+                        </li>
+						<li>
+							<label for="chck-box4">Manga</label>
+							<input type="checkbox" id="chck-box4" onclick="marketFilterManga(this,'manga')">
+                        </li>
+						<li>
+							<label for="chck-box4">Paint</label>
+							<input type="checkbox" id="chck-box4" onclick="marketFilterPaint(this,'paint')">
+                        </li>
+						<li>
+							<label for="chck-box5">Picture</label>
+							<input type="checkbox" id="chck-box5" onclick="marketFilterPic(this,'picture')">
+                        </li>
+						<li>
+							<label for="chck-box6">Portrait</label>
+							<input type="checkbox" id="chck-box6" onclick="marketFilterPort(this,'portrait')">
+                        </li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 market-container">
+				<div class="container landscape">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/landscapes/landscape4.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container cartoon">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/cartoon1.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name<i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container cartoon">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/cartoon2.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-2">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 market-container">
+				<div class="container cartoon">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/cartoon3.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container manga">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/manga1.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name<i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container manga">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/manga2.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 market-container">
+				<div class="container manga">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/manga-cartoons/manga3.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container abstract">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/portraits/abstract1.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text  market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container abstract">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/portraits/abstract2.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3 market-container">
+				<div class="container portrait">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/portraits/portrait3.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container paint">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/portraits/paint2.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3 market-container">
+				<div class="container portrait">
+					<a href="example-pic-page.html">
+						<img class="market-image" src="../assets/img/portraits/portrait1.jpg">
+						<div class="body-text">£Price</div>
+					</a>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
+						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
+					</p>
+				</div>
+			</div>
+			<div class="col-3">
+
+			</div>
+		</div>
+	</div>
+	</div>
 </body>
 
 <footer>
