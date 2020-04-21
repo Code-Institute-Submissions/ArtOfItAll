@@ -1,4 +1,4 @@
-# Art Of It All - v0.31 - Market Filter Rewritten
+# Art Of It All - v0.32 - Home to Market URL Filter Added
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -148,8 +148,30 @@ these are in light/dark containers so there style can be changed by the light/da
 
 ### Home Feature
 
+#### Links to Market that refine items visible
+The links open to the market page with a tag word linked to the href. 
+On document being ready the urlCheck.js checks which word has been added and checks the box for the corrisponding item type. 
+Then it calls the filter code which handles the rest.
+```javascript
+$(document).ready(function(){
+    if (window.location.href.indexOf("portrait") > -1){
+        $('#portrait').prop('checked', true);
+        marketFilter()
+    }
+    if (window.location.href.indexOf("landscape") > -1){
+        $('#landscape').prop('checked', true);
+        marketFilter()
+    }
+    if (window.location.href.indexOf("manga-cartoon") > -1){
+        $('#manga').prop('checked', true);
+        $('#cartoon').prop('checked', true);
+        marketFilter()
+    }
+    })
+```
+
 #### Contact page link
-This is simply done by h3 with some text above a h2 which is wrapped in an anchor link to the contact page.
+This is simply done by h3 with some text, above a h2 which is wrapped in an anchor link to the contact page.
 
 #### Calendar
 Artist Selector - the user can select the calendar of the artist they want, they do this by selecting the artist from a dropdown list
@@ -257,16 +279,10 @@ Currently the links all lead to the same page but in a fully developed version t
 ## Features Left to Implement
 
 ### UX Feature
-* Sticky bar at the top with open button, site title, light/dark toggle and login button
-* Open button and side navigation
-* Light/Dark that changes the theme of the page except for the top bar and the footer
-* Login that will allow people to login with Google
-* Grid method throughout all pages using Bootstrap
+ The UX features I want currently are implemented.
 
 ### Home Feature
-* Links to the market page that select filter settings, i.e. portrait links to the market page with portraits chose in filters
-* Contact page link 
-* Calendar that can be changed by the name selected on the dropdown list above the picture
+The Home features I want currently are implemented.
 
 ### Market Feature
 * Picture of the art displayed in a grid with price over the top of the picture and description underneath the picture

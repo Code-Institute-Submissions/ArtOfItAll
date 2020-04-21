@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 	<meta charset="UTF-8">
@@ -17,8 +17,9 @@
 	<script src="../node_modules/jquery/dist/jquery.min.js"
 		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 	<!---Personal Scripts Link--->
-	<script src="../assets/js/basket.js"></script>
 	<script src="../assets/js/marketFilter.js"></script>
+    <script src="../assets/js/urlCheck.js"></script>
+	<script src="../assets/js/basket.js"></script>
 	<script src="../assets/js/lightDarkMode.js"></script>
 	<script src="../assets/js/sideNavMenu.js"></script>
 	<script src="../assets/js/footerResize.js"></script>
@@ -119,31 +120,31 @@
 					<ul class="filters">
 						<li>
 							<label for="chck-box1">Abstract</label>
-							<input data-num="0" class="checkbox" type="checkbox" id="chck-box1" onclick="marketFilter()">
+							<input data-num="0" class="checkbox" type="checkbox" id="abstract" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box2">Cartoon</label>
-							<input data-num="1" class="checkbox" type="checkbox" id="chck-box2" onclick="marketFilter()">
+							<input data-num="1" class="checkbox" type="checkbox" id="cartoon" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box3">Landscape</label>
-							<input data-num="2" class="checkbox" type="checkbox" id="chck-box3" onclick="marketFilter()">
+							<input data-num="2" class="checkbox" type="checkbox" id="landscape" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box4">Manga</label>
-							<input data-num="3" class="checkbox" type="checkbox" id="chck-box4" onclick="marketFilter()">
+							<input data-num="3" class="checkbox" type="checkbox" id="manga" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box4">Paint</label>
-							<input data-num="4" class="checkbox" type="checkbox" id="chck-box4" onclick="marketFilter()">
+							<input data-num="4" class="checkbox" type="checkbox" id="paint" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box5">Picture</label>
-							<input data-num="5" class="checkbox" type="checkbox" id="chck-box5" onclick="marketFilter()">
+							<input data-num="5" class="checkbox" type="checkbox" id="picture" onclick="marketFilter()">
                         </li>
 						<li>
 							<label for="chck-box6">Portrait</label>
-							<input data-num="6" class="checkbox" type="checkbox" id="chck-box6" onclick="marketFilter()">
+							<input data-num="6" class="checkbox" type="checkbox" id="portrait" onclick="marketFilter()">
                         </li>
 					</ul>
 				</div>
@@ -178,7 +179,7 @@
 				</div>
 			</div>
 			<div class="col-3 market-container">
-				<div class="container cartoon">
+				<div class="container cartoon portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/cartoon2.jpg">
 						<div class="body-text">£Price</div>
@@ -195,7 +196,7 @@
 		</div>
 		<div class="row">
 			<div class="col-3 market-container">
-				<div class="container cartoon">
+				<div class="container cartoon portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/cartoon3.jpg">
 						<div class="body-text">£Price</div>
@@ -221,7 +222,7 @@
 				</div>
 			</div>
 			<div class="col-3 market-container">
-				<div class="container manga">
+				<div class="container manga portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/manga2.jpg">
 						<div class="body-text">£Price</div>
@@ -239,7 +240,7 @@
 		</div>
 		<div class="row">
 			<div class="col-3 market-container">
-				<div class="container manga">
+				<div class="container manga portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/manga3.jpg">
 						<div class="body-text">£Price</div>
@@ -252,7 +253,7 @@
 				</div>
 			</div>
 			<div class="col-3 market-container">
-				<div class="container abstract">
+				<div class="container abstract portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/abstract1.jpg">
 						<div class="body-text">£Price</div>
@@ -265,7 +266,7 @@
 				</div>
 			</div>
 			<div class="col-3 market-container">
-				<div class="container abstract">
+				<div class="container abstract portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/abstract2.jpg">
 						<div class="body-text">£Price</div>
@@ -296,7 +297,7 @@
 				</div>
 			</div>
 			<div class="col-3 market-container">
-				<div class="container paint">
+				<div class="container paint portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/paint2.jpg">
 						<div class="body-text">£Price</div>
