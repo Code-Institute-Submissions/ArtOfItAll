@@ -1,4 +1,4 @@
-# Art Of It All - v0.3 - Market Page Content Added
+# Art Of It All - v0.31 - Market Filter Rewritten
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -110,11 +110,11 @@ They fill this out and are helped with their query.
 * A checkout/pay button will be under that
 * Finally there will be a link to help page for any queries
 
-### Existing Features
+## Existing Features
 
-#### UX Feature
+### UX Feature
 
-##### Open button and side navigation
+#### Open button and side navigation
 
 Open button - allows the user to press it and open a navigation that comes accross the side of the left hand side of the page/
 To do this the Javascript code [sideNavMenu.js](assets/js/sideNavMenu.js) was written. It has two simple functions in it, 
@@ -123,7 +123,7 @@ The second is closeNav() which does the opsite.
 Side Navigation - allows user to navigate to the other pages on the website, by clicking the page names on this side bar/
 The headers on this div are wrapped in anchor links to the other pages allowing navigation.
 
-##### Light/Dark Toggle
+#### Light/Dark Toggle
 
 Light/Dark button - the user can change the theme of the page between a lighter and a darker theme, 
 they do this by clicking the toggle button on the top headers
@@ -142,16 +142,16 @@ This code uses an event listener to see if the box has been clicked and if its c
 These have css rules linked to them which change the pages apperance. 
 And I use a transiton so background and headers change first then text follows soon after.
 
-##### Grid method throughout all pages using Bootstrap
+#### Grid method throughout all pages using Bootstrap
 To keep a consitant size between all the pages and between the screen sizes I have used Bootstrap grid method to layout my pages, 
 these are in light/dark containers so there style can be changed by the light/dark toggle.
 
-#### Home Feature
+### Home Feature
 
-##### Contact page link
+#### Contact page link
 This is simply done by h3 with some text above a h2 which is wrapped in an anchor link to the contact page.
 
-##### Calendar
+#### Calendar
 Artist Selector - the user can select the calendar of the artist they want, they do this by selecting the artist from a dropdown list
 This is done by the [calendar.js](assets/js/calendar.js). All the calendar are hidden till a choice is made. 
 The js waits till the document is ready then builds calendars for all the artist on the list with the data in the js folder, 
@@ -192,87 +192,105 @@ $(document).ready(function () {
     });
 });
 ```
-#### Market Feature
+### Market Feature
 
-##### Picture of the art displayed in a grid
+#### Picture of the art displayed in a grid
 This is done with Bootstrap, there are 4 colums, 3 are the pictures and one of them is the filter. 
 I have decide to not have the price displayed over the top because on smaller screen sizes it didn't look right.
 
-##### A filter
+#### A filter
 Filter - the user wants only specific images displayed, to do this they click the ones they want to keep
 Currently this only works if you select and deselect the ones you don't want on the page,
 also because of the way the page is layed out the pictures stay in the same position, 
-if the ones above them go they will move up but not sideways.
-![alt text](assets/img/examples/example-img1.jpg "example image 1 can be found in the assets/img/exaples file")
-![alt text](assets/img/examples/example-img2.jpg "example image 1 can be found in the assets/img/exaples file")
-The way this works it that it when clicked sends in the checkboxs current value and the name asscoiated with the selected box.
+if the ones above them go they will move up but not sideways.\
+[example1](assets/img/examples/example-img1.jpg)
+[example2](assets/img/examples/example-img2.jpg) \
+The select and deselect issue has been fixed now. The way this works now is the HTML code calls the function marketFilter() on click.
 ```html
 <li>
 	<label for="chck-box1">Abstract</label>
-	<input type="checkbox" id="chck-box1" onclick="marketFilterAbst(this,'abstract')">
+	<input data-num="0" class="checkbox" type="checkbox" id="chck-box1" onclick="marketFilter()">
 </li>
 ```
-Then the function takes these values in and checks wheather the checkboxs value is checked or not,
-if its checked the function takes the second value entered and uses this to go through all the images with this class name and set them to block, i.e set them visble.
-If it's not selected it will set its display to none to hide all of them.
+Then the function clears all the items on the page with a for loop. Then the second for loop loops through all the checkboxes and checks which ones are check or not, 
+then takes the data-num of the ones who are checked and use this to select the checkbox names that corrispond with the numbers in the filter function.
+Then it goes through the list of names and uses this to select the divs by there class name and sets there display to block.
 ```javascript
-function marketFilterAbst(chckbox, abstract) {
-    if (chckbox.checked == true) {
-        var elems = document.getElementsByClassName(abstract);
-        for (var i = 0; i < elems.length; i++) {
-            elems[i].style.display = "block";;
+function filters(filter) {
+    var filters = {
+        0: "abstract",
+        1: "cartoon",
+        2: "landscape",
+        3: "manga",
+        4: "paint",
+        5: "picture",
+        6: "portrait"
+    }
+    return filters[filter];
+}
+
+function marketFilter() {
+    for (var i = 0; i < 7; i++) {
+            var elem = filters(i)
+            var filter = document.getElementsByClassName(elem);
+            for(var j = 0; j < filter.length; j++) {
+                filter[j].style.display = "none";;
+            }
         }
-        
-    } else {
-        var elems = document.getElementsByClassName(abstract);
-        for (var i = 0; i < elems.length; i++) {
-            elems[i].style.display = "none";;
+    var checkbox = document.getElementsByClassName("checkbox")
+    for (var i = 0; i < checkbox.length; i++){
+        if(checkbox[i].checked == true) {
+            var filter = filters(checkbox[i].dataset.num);
+            var filterChoice = document.getElementsByClassName(filter)
+            for(var j = 0; j < filterChoice.length; j++) {
+                filterChoice[j].style.display = "block";;
+            }
         }
     }
 }
 ```
 
-###### Clicking the picture
+#### Clicking the picture
 More information - the user wants more information about the image, they can click them image to be transfered to a page with more information about it
 Currently the links all lead to the same page but in a fully developed version they would all lead to an individual page about the selected picture
 
-### Features Left to Implement
+## Features Left to Implement
 
-#### UX Feature
+### UX Feature
 * Sticky bar at the top with open button, site title, light/dark toggle and login button
 * Open button and side navigation
 * Light/Dark that changes the theme of the page except for the top bar and the footer
 * Login that will allow people to login with Google
 * Grid method throughout all pages using Bootstrap
 
-#### Home Feature
+### Home Feature
 * Links to the market page that select filter settings, i.e. portrait links to the market page with portraits chose in filters
 * Contact page link 
 * Calendar that can be changed by the name selected on the dropdown list above the picture
 
-#### Market Feature
+### Market Feature
 * Picture of the art displayed in a grid with price over the top of the picture and description underneath the picture
 * A filter section on the right of the page that leaves picture with the correct class and removes the rest
 * Clicking the picture will transition with a zoom in on the clicked image and show more information about the image
 * Constantly updating basket at the top of the page, with a checkout button next to it
 
-#### Policies Features
+### Policies Features
 * Three boxes with information about Policies Terms and Conditions, acceptable requests and service description
 * The last two boxes will link to respective pages with more in-depth information about this
 * The top will open a new page and download a document with more information on this
 
-#### Contact Features
+### Contact Features
 * Link to Policies page for more information before the submitting a form
 * A form with a dropdown for with all the different artist and the help department
 * The form will have a name box for the person using it 
 * The form will have a box that asks for the user's email
 * The form will have a box for the request they want to put in, the text in there before they start typing will be an example
 
-#### Past Art Feature
+### Past Art Feature
 * Will have a picture of the requested art in a grid
 * Under the pictures will the artist, the buyer and a description
 
-#### Checkout feature
+### Checkout feature
 * Will have all the items in the current basket
 * These items will have a ruff description, artist and price
 * A total will be displayed, underneath it will be a total without VAT
@@ -332,58 +350,58 @@ Content
 I have used lorem for description text to save time for better development
 
 Media
-The pictures for this page where obtained from Google search 
+The pictures for this page where obtained from Google search\
 [paint1.jpg](assets/img/portraits/paint1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/327707310359626455/?autologin=true) 
-and it says it's by Nikos Gyftakis./
+and it says it's by Nikos Gyftakis.\
 [paint3.jpg](assets/img/portraits/paint3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/216032113352265032/) 
-and it says it's by Joshua Miels.
+and it says it's by Joshua Miels.\
 [paint2.jpg](assets/img/portraits/paint2.jpg) was on [artnet news](https://news.artnet.com/art-world/art-history-through-perfect365-app-321640) 
-and it says it's by Brian Boucher./
+and it says it's by Brian Boucher.\
 [portrait2.jpg](assets/img/portraits/portrait2.jpg) was on [Anna Bregman personal site](https://annabregmanportraits.co.uk/pencil-portraits/) 
-and it says it's by Anna Bregman./
+and it says it's by Anna Bregman.\
 [portrait3.jpg](assets/img/portraits/portrait3.jpg) was on [Pencil Sketch Portraits](https://www.pencilsketchportraits.co.uk/baby-drawings/) 
-and it says it's by Angela, no last name stated./
+and it says it's by Angela, no last name stated.\
 [manga1.jpg](assets/img/manga-cartoons/manga1.jpg) was on [My Anime List](https://myanimelist.net/featured/2070/The_Top_14_Series_With_The_Best_Manga_Artwork_Ever) 
-and it says it's by Takeshi Obata./
+and it says it's by Takeshi Obata.\
 [manga2.jpg](assets/img/manga-cartoons/manga2.jpg) was on [Ebay](https://www.ebay.com/itm/C95-CANVAS-En-Morikura-Doujinshi-Fuyu-no-Onnanoko-/323627641814) 
-and I can't tell who it is by./
+and I can't tell who it is by.\
 [manga3.jpg](assets/img/manga-cartoons/manga3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/517984394621954627/) 
-and I can't tell who it is by./
+and I can't tell who it is by.\
 [portrait1.jpg](assets/img/portraits/portrait1.jpg) was on [Rita Kirkman Drawings](https://www.ritakirkmandrawings.com/) 
-and it says it's by Rita Kirkman./
+and it says it's by Rita Kirkman.\
 [abstract1.jpg](assets/img/portraits/abstract1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/328903579035102913/) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [abstract2.jpg](assets/img/portraits/abstract2.jpg) was on [Fine Art America](https://fineartamerica.com/featured/abstract-portrait-rani-s-manik.html) 
-and it says it's by Rani S Manik./
+and it says it's by Rani S Manik.\
 [abstract3.jpg](assets/img/portraits/abstract3.jpg) was on [Kent Paulette personal page](https://www.kentpaulette.com/product/taylor-swift/) 
-and it says it's by Kent Paulette./
+and it says it's by Kent Paulette.\
 [cartoon1.jpg](assets/img/manga-cartoons/cartoon1.jpg) was on [Clipart Library](http://clipart-library.com/free/cartoon-cat-png.html) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [cartoon3.jpg](assets/img/manga-cartoons/cartoon3.jpg) was on [Fiverr](https://www.fiverr.com/shalemsingh/create-cool-cartoon-avatars) 
-and it says it's by shalemsingh(screen name)./
+and it says it's by shalemsingh(screen name).\
 [cartoon2.jpg](assets/img/manga-cartoons/cartoon2.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/25051341657469044/) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [landscape1.jpg](assets/img/landscapes/landscape1.jpg) was on [My Modern Met](https://mymodernmet.com/polygon-art-landscape-paintings-elyse-dodge/) 
-and it says it's by Emma Taggart./
+and it says it's by Emma Taggart.\
 [landscape2.jpg](assets/img/landscapes/landscape2.jpg) was on [Fiverr](https://www.fiverr.com/tamajoshi/paint-you-a-beautiful-pixel-art-landscape) 
-and it says it's by tamajoshi(screen name)./
+and it says it's by tamajoshi(screen name).\
 [landscape3.jpg](assets/img/landscapes/landscape3.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/467881848786061919/) 
-and it says it's by Paintings By Justin./
+and it says it's by Paintings By Justin.\
 [landscape4.jpg](assets/img/landscapes/landscape4.jpg) was on [Pixels](https://www.pexels.com/search/landscape/) 
-and it says it's by Pok Rie./
+and it says it's by Pok Rie.\
 [picture1.jpg](assets/img/portraits/portrait1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/409194316117415873/) 
-and it says it's by Steven Saillant./
+and it says it's by Steven Saillant.\
 [picture2.jpg](assets/img/portraits/portrait2.jpg) was on [techradar](https://www.techradar.com/how-to/photography-video-capture/cameras/77-photography-techniques-tips-and-tricks-for-taking-pictures-of-anything-1320768) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [picture3.jpg](assets/img/portraits/portrait3.jpg) was on [Skylum](https://skylum.com/how-to/how-to-photoshop-someone-into-picture) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [requested-art2.jpg](assets/img/requests/requested-art2.jpg) was on [Template.Net](https://www.template.net/design-templates/art/cool-art/) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 [requested-art1.jpg](assets/img/requests/requested-art1.jpg) was on [Funny Junk](https://funnyjunk.com/Cool+art+by+a+friend/funny-pictures/5631723/) 
-and I think it's by glasswall but I'm not sure./
+and I think it's by glasswall but I'm not sure.\
 [requested-art3.jpg](assets/img/requests/requested-art3.jpg) was on [Unreality Mag](https://unrealitymag.com/a-cool-but-bizarre-gallery-of-super-mario-bros-fan-art/) 
-and it says it is by Madison, no last name is stated./
+and it says it is by Madison, no last name is stated.\
 [requested-art4.jpg](assets/img/requests/requested-art4.jpg) was on [Ebay](https://www.ebay.co.uk/itm/Watercolor-Pop-Art-Eye-Ball-Zombie-Rainbow-Wet-Paint-Graffiti-Cool-3-Sticker-/113734900026) 
-and it doesn't say who it is by./
+and it doesn't say who it is by.\
 
 Acknowledgements
