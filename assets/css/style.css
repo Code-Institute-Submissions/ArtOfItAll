@@ -301,6 +301,13 @@ body{
     width: 75%;
 }
 
+/*Feedback Form*/
+.form-note{
+	color: #b5b5b5;
+	text-align: center;
+	margin: 0;
+}
+
 /*Footer*/
 footer{
     background-color: #202020;
@@ -644,9 +651,6 @@ footer{
 }
 
 @media screen and (max-width: 320px){
-    .top-space{
-        margin-top: 25vw;
-    }
     .fan-login{
         margin-top: 0.2vw;
     }

@@ -1,4 +1,4 @@
-# Art Of It All - v0.32 - Home to Market URL Filter Added
+# Art Of It All - v0.3.4 - Contact page styled and EmailJS linked up
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -158,15 +158,6 @@ $(document).ready(function(){
         $('#portrait').prop('checked', true);
         marketFilter()
     }
-    if (window.location.href.indexOf("landscape") > -1){
-        $('#landscape').prop('checked', true);
-        marketFilter()
-    }
-    if (window.location.href.indexOf("manga-cartoon") > -1){
-        $('#manga').prop('checked', true);
-        $('#cartoon').prop('checked', true);
-        marketFilter()
-    }
     })
 ```
 
@@ -276,6 +267,32 @@ function marketFilter() {
 More information - the user wants more information about the image, they can click them image to be transfered to a page with more information about it
 Currently the links all lead to the same page but in a fully developed version they would all lead to an individual page about the selected picture
 
+### Contact Features
+
+#### Link to Policies page
+At the top of the page under the first header is some text about how we want people to treat each other. 
+Under that it suggest that if anyone wants infomation of the etiquette we want or wants to know how the services work, that they should go to the policies page.  
+
+#### A dropdown with all the different artist and the help department
+The items on the dropdown hold values that would be taken by the submit and used for the to_email parameter in the EmailJS form template. 
+This is set to be required.
+
+#### A name box for the person using it 
+The top box of the form has the label full name and it has a name value of from_name. This value allows the EmailJS to use this in the template. 
+This is also set to required.
+
+#### The form will have a box that asks for the user's email
+It has a box that askes for the users email, this has the value from_email for the EmailJS template. 
+Also, underneath this form field it reassures customers that we won't share there email or personal details with anyone.
+
+#### Request area, with example text
+The second to last part of the form is the request section, which is taken to the EmailJS as request. 
+In this box is a small example of how to politly ask for there request, just to reinforce the point of being nice and friendly to who ever they are contacting.
+
+#### One Issue
+This form can't be used because when I enter my id for the initallization it complains that my id is invalded, 
+I have double checked it against the one on the site and it is exactly the same so I am unsure what's wrong.
+
 ## Features Left to Implement
 
 ### UX Feature
@@ -297,7 +314,7 @@ The Home features I want currently are implemented.
 
 ### Contact Features
 * Link to Policies page for more information before the submitting a form
-* A form with a dropdown for with all the different artist and the help department
+* A form with a dropdown with all the different artist and the help department
 * The form will have a name box for the person using it 
 * The form will have a box that asks for the user's email
 * The form will have a box for the request they want to put in, the text in there before they start typing will be an example
