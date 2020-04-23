@@ -1,4 +1,4 @@
-# Art Of It All - v0.3.5 - Polices, Services and Request Page done
+# Art Of It All - v0.3.6 - Request page made and Footer updated
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -305,6 +305,102 @@ They still need information adding.
 
 #### The top will download a draft contract
 This is linked and works, I downloads the draft-contact.docx held in the [documents](assets/document/draft-contract.docx) folder under assets.
+
+### Footer
+
+#### Links in the footer updated
+The links in footer now connect to the pages I want them to.
+```html
+<div class="col-sm-4">
+    <h5 class="footer-hdr">Social</h5>
+		<ul class="icon">
+			<li>
+				<h6 class="footer-text">@AJokerXDArtnCrafts
+				<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+					<i class="fab fa-facebook" aria-hidden="true"></i>
+				</a>
+				</h6>
+		    </li>
+			<li>
+				<h6 class="footer-text">@AJokerxd
+				<a target="_blank" href="https://twitter.com/AJokerxd">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
+			    </a>
+				</h6>
+			</li>
+			<li>
+				<h6 class="footer-text">ajokerxd
+				<a target="_blank" href="https://www.instagram.com/ajokerxd/">
+					<i class="fab fa-instagram" aria-hidden="true"></i>
+				</a>
+				</h6>
+			</li>
+			<li>
+				<h6 class="footer-text">A-JokerXD
+				<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+					<i class="fab fa-youtube" aria-hidden="true"></i>
+				</a>
+				</h6>
+			</li>
+			<li>
+				<h6 class="footer-text">AJokerXDYouTube
+				<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+					<i class="fab fa-twitch"></i>
+				</a>
+				</h6>
+			</li>
+		</ul>
+	</div>
+<h6 class="footer-hdr">For more information see here -
+	<ul class="icon">
+	    <li>
+			<a class="footer-text" href="page/policies.html">Contact Policy</a>
+		</li>
+		<li>
+			<a class="footer-text" href="page/policies/requests.html">Request Policy</a>
+		</li>
+		<li>
+			<a class="footer-text" href="page/policies/services.html">Service Practices</a>
+		</li>
+	</ul>
+<ul class="icon">
+	<li>
+		<a class="footer-text" href="page/contact.html">Contact Page</a>
+	</li>
+</ul>
+```
+
+#### Info added to the footer
+There is a brief description added to the sections in the footer now.
+```html
+<div class="col-sm-4">
+	<h5 class="footer-hdr">Policies, Requests and Services</h5>
+	<p class="footer-text">We have a draft contract you can checkout before placing a request order, we also
+		have information on how our requests work and how we'd like you and the artist to talk to each
+		other. Also, we have a page that talks about our service processes and tells you how busy each
+		artist is at the moment.</p>
+</div>
+<div class="col-sm-4">
+	<h5 class="footer-hdr">Help</h5>
+	<p class="footer-text">For help you can send a help request to the help department through the contact
+		page.
+	</p>
+</div>
+```
+
+### Past Art Feature
+
+#### Will have a picture of the requested art in a grid
+This is the same design as the market page with the same filter,
+it differs from the market page as it doesn't say the price and has the customers name on it.
+Finally, it would differs from the market page because the description would be about the request made,
+and less about why the artist made it and their inspiration.
+However, this would be in a live version, as this is for my project it is populated with lorem.
+
+#### Example extra info page
+This is the same as the market one, 
+but again it is differs with the information shown on the page.
+It again has simular information about the customers request and the process and less about the artist thought. 
 
 ## Features Left to Implement
 

@@ -308,6 +308,9 @@ body{
 }
 
 /*Footer*/
+.list-inline{
+    padding-left: 5vw;
+}
 footer{
     background-color: #202020;
     color: #fafafa;
@@ -339,6 +342,7 @@ footer{
 
 .icon{
     padding-bottom: 15px;
+    list-style: none;
 }
 
 .icon li a i{

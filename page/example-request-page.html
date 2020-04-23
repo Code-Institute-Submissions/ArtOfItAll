@@ -5,41 +5,40 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Art Of It All - Services</title>
+	<title>Art Of It All - Product Name</title>
 	<!---Link to stylesheets; Bootstrap, Font Awesome and Google Fonts--->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto+Condensed:ital@1&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="../../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
 	<!---Script links for Bootstrap and Jquery--->
 	<script src="https://kit.fontawesome.com/5c3d3d9c4a.js" crossorigin="anonymous"></script>
-	<script src="../../node_modules/jquery/dist/jquery.min.js"
+	<script src="../node_modules/jquery/dist/jquery.min.js"
 		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 	<!---Personal Scripts Link--->
-    <script src="../../assets/js/waitTime.js"></script>
-	<script src="../../assets/js/lightDarkMode.js"></script>
-	<script src="../../assets/js/sideNavMenu.js"></script>
-	<script src="../../assets/js/footerResize.js"></script>
+	<script src="../assets/js/lightDarkMode.js"></script>
+	<script src="../assets/js/sideNavMenu.js"></script>
+	<script src="../assets/js/footerResize.js"></script>
 	<!---Side Navigation Menu--->
 	<div id="mySidenav" class="side-nav">
 		<a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
-		<a class="active-page" href="../../index.html">Home</a>
-		<a href="../market.html">Market</a>
+		<a class="active-page" href="../index.html">Home</a>
+		<a href="market.html">Market</a>
 		<div class="dropdown">
 			<button class="drop-btn"><i class="fas fa-chevron-circle-down"></i></button>
 			<div class="dropdown-content">
-				<a href="../market.html?abstract">Abstract</a>
-				<a href="../market.html?cartoon">Cartoon</a>
-				<a href="../market.html?landscape">Landscape</a>
-				<a href="../market.html?manga">Manga</a>
-				<a href="../market.html?paint">Paint</a>
-				<a href="../market.html?picture">Picture</a>
+                <a href="market.html?abstract">Abstract</a>
+                <a href="market.html?cartoon">Cartoon</a>
+                <a href="market.html?landscape">Landscape</a>
+                <a href="market.html?manga">Manga</a>
+                <a href="market.html?paint">Paint</a>
+                <a href="market.html?picture">Picture</a>
 			</div>
 		</div>
-        <a href="../past-requests.html">Past Requests</a>
-		<a href="../contact.html">Contact</a>
-		<a href="../policies.html">Policies, Requests and Services</a>
+        <a href="past-requests.html">Past Requests</a>
+		<a href="contact.html">Contact</a>
+		<a href="policies.html">Policies, Requests and Services</a>
 	</div>
 	<div class="row hdr">
 		<div class="col-2">
@@ -72,64 +71,46 @@
 <body>
 	<div class="top-space"></div>
 	<div class="l-d-container">
-		<h2 class="body-hdr">Requests</h2>
+		<h2 class="body-hdr">Images Name - Made by Artist Name for Customer Name</h2>
+        <p class="body-text">All art displayed here is property of the customers and we have asked permision to display
+			it. Any attempt to copy/take these will be treated as thieft</p>
 	</div>
 	<div class="l-d-container">
-		<h3 class="body-hdr">How the services work</h3>
-		<p class="body-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-			Laboriosam, fugiat! Cumque ipsam minima ratione illum explicabo quod omnis enim similique,
-			obcaecati culpa nihil expedita sit, blanditiis deserunt tenetur sequi cum.
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			Debitis vitae excepturi veniam aliquam repudiandae eum,
-			consequuntur neque alias in tempore libero id! At dicta optio est esse voluptate facere aperiam.
-		</p>
-	</div>
-	<div class="l-d-container">
-		<h3 class="body-hdr">How long the service takes</h3>
-        <h4 class="body-hdr">Please choose a artist to see the estimated work time of new pieces:
-        <span id="time-artist1" class="time"> 2 Days and 15 Hours </span>
-        <span id="time-artist2" class="time"> 3 Days and 2 Hours </span>
-        <span id="time-artist3" class="time"> 3 Weeks </span>
-        <span id="time-artist4" class="time"> 1 day </span>
-        <span id="time-artist5" class="time"> 2 Days and 20 Hours </span>
-        <span id="time-artist6" class="time"> 6 days </span>
-        <span id="time-artist7" class="time"> 2 months </span>
-        <span id="time-artist8" class="time"> Currently not taking requests </span>
-        <span id="time-artist9" class="time"> 5 days and 6 hours </span>
-        <span id="time-artist10" class="time"> 2 weeks </span>
-        wait on new pieces.
-        <select id="serviceTime">
-	        <option>Select Option</option>
-	        <option value="-artist1">Artist Name 1</option>
-	        <option value="-artist2">Artist Name 2</option>
-	        <option value="-artist3">Artist Name 3</option>
-	        <option value="-artist4">Artist Name 4</option>
-	        <option value="-artist5">Artist Name 5</option>
-            <option value="-artist6">Artist Name 6</option>
-	        <option value="-artist7">Artist Name 7</option>
-	        <option value="-artist8">Artist Name 8</option>
-	        <option value="-artist9">Artist Name 9</option>
-	        <option value="-artist10">Artist Name 10</option>
-        </select>
-        </h4>
-		<p class="body-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-			Laboriosam, fugiat! Cumque ipsam minima ratione illum explicabo quod omnis enim similique,
-			obcaecati culpa nihil expedita sit, blanditiis deserunt tenetur sequi cum.
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			Debitis vitae excepturi veniam aliquam repudiandae eum,
-			consequuntur neque alias in tempore libero id! At dicta optio est esse voluptate facere aperiam.
-		</p>
-	</div>
-	<div class="l-d-container">
-		<h3 class="body-hdr">Zero Tolerance Policy</h3>
-		<p class="body-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-			Laboriosam, fugiat! Cumque ipsam minima ratione illum explicabo quod omnis enim similique,
-			obcaecati culpa nihil expedita sit, blanditiis deserunt tenetur sequi cum.
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-			Debitis vitae excepturi veniam aliquam repudiandae eum,
-			consequuntur neque alias in tempore libero id! At dicta optio est esse voluptate facere aperiam.
-		</p>
-	</div>
+		<div class="sale-img">
+			<img src="../assets/img/landscapes/landscape3.jpg">
+        </div>
+		</div>
+		<div class="l-d-container">
+			<h3 class="body-hdr">Artist Name: Jane Doe</h3>
+			<h3 class="body-hdr">Date Made: 1st June 2019</h3>
+			<h3 class="body-hdr">Customer: Customer Name</h3>
+			<h4 class="body-hdr">Description:</h4>
+			<p class="body-hdr">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Pariatur quis dolores, est molestiae consectetur ducimus,
+				saepe provident voluptatum consequatur consequuntur explicabo porro alias ipsa repellat cumque hic ex
+				nihil sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Libero dolorem veritatis porro nisi expedita excepturi doloribus nostrum quo consequuntur reiciendis
+				neque ipsa,
+				dolorum quisquam deleniti veniam? Corporis laboriosam neque quod!
+			</p>
+		</div>
 </body>
 
 <footer>
@@ -175,13 +156,13 @@
 					<ul class="list-inline">
 						<div class="col-12">
 							<li class="list-inline-item">
-								<a class="footer-text" href="../policies.html">Contact Policy</a>
+								<a class="footer-text" href="policies.html">Contact Policy</a>
 							</li>
 							<li class="list-inline-item">
-								<a class="footer-text" href="requests.html">Request Policy</a>
+								<a class="footer-text" href="policies/requests.html">Request Policy</a>
 							</li>
 							<li class="list-inline-item">
-								<a class="footer-text" href="services.html">Service Practices</a>
+								<a class="footer-text" href="policies/services.html">Service Practices</a>
 							</li>
 						</div>
 					</ul>
@@ -195,7 +176,7 @@
 					<ul class="footer-list">
 						<div class="col-12">
 							<li>
-								<a class="footer-text" href="../contact.html">Contact Page</a>
+								<a class="footer-text" href="contact.html">Contact Page</a>
 							</li>
 						</div>
 					</ul>
@@ -254,13 +235,13 @@
 				<h6 class="footer-hdr">For more information see here -
 					<ul class="icon">
 						<li>
-							<a class="footer-text" href="../policies.html">Contact Policy</a>
+							<a class="footer-text" href="policies.html">Contact Policy</a>
 						</li>
 						<li>
-							<a class="footer-text" href="requests.html">Request Policy</a>
+							<a class="footer-text" href="policies/requests.html">Request Policy</a>
 						</li>
 						<li>
-							<a class="footer-text" href="services.html">Service Practices</a>
+							<a class="footer-text" href="policies/services.html">Service Practices</a>
 						</li>
 					</ul>
 			</div>
@@ -271,7 +252,7 @@
 				</p>
 				<ul class="icon">
 					<li>
-						<a class="footer-text" href="../contact.html">Contact Page</a>
+						<a class="footer-text" href="contact.html">Contact Page</a>
 					</li>
 				</ul>
 			</div>
