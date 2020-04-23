@@ -1,4 +1,4 @@
-# Art Of It All - v0.3.4 - Contact page styled and EmailJS linked up
+# Art Of It All - v0.3.5 - Polices, Services and Request Page done
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -293,6 +293,19 @@ In this box is a small example of how to politly ask for there request, just to 
 This form can't be used because when I enter my id for the initallization it complains that my id is invalded, 
 I have double checked it against the one on the site and it is exactly the same so I am unsure what's wrong.
 
+### Policies Features
+
+#### Three boxes with information
+These are in the page, but they are filled with lorem at the moment so I can focus on other features. 
+If I have time before handin this will be filled with the appropriate information.
+
+#### The last two boxes will link to respective pages
+This has been made and the links work, these have been styled and the features I want added.
+They still need information adding.
+
+#### The top will download a draft contract
+This is linked and works, I downloads the draft-contact.docx held in the [documents](assets/document/draft-contract.docx) folder under assets.
+
 ## Features Left to Implement
 
 ### UX Feature
@@ -302,22 +315,14 @@ I have double checked it against the one on the site and it is exactly the same 
 The Home features I want currently are implemented.
 
 ### Market Feature
-* Picture of the art displayed in a grid with price over the top of the picture and description underneath the picture
-* A filter section on the right of the page that leaves picture with the correct class and removes the rest
-* Clicking the picture will transition with a zoom in on the clicked image and show more information about the image
+The Market features I want currently are implemented.
 * Constantly updating basket at the top of the page, with a checkout button next to it
 
 ### Policies Features
-* Three boxes with information about Policies Terms and Conditions, acceptable requests and service description
-* The last two boxes will link to respective pages with more in-depth information about this
-* The top will open a new page and download a document with more information on this
+The Market features I want currently are implemented.
 
 ### Contact Features
-* Link to Policies page for more information before the submitting a form
-* A form with a dropdown with all the different artist and the help department
-* The form will have a name box for the person using it 
-* The form will have a box that asks for the user's email
-* The form will have a box for the request they want to put in, the text in there before they start typing will be an example
+The Market features I want currently are implemented.
 
 ### Past Art Feature
 * Will have a picture of the requested art in a grid
