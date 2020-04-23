@@ -1,3 +1,4 @@
+# Table Of Content
 - [Art Of It All - v0.3.6 - Request page made and Footer updated](#art-of-it-all---v036---request-page-made-and-footer-updated)
   * [UX](#ux)
   * [Features](#features)
@@ -128,6 +129,8 @@ They fill this out and are helped with their query.
 
 ## Features
 
+- [Table Of Content](#table-of-content)
+
 ### UX Feature
 * Sticky bar at the top with open button, site title, light/dark toggle and login button
 * Open button and side navigation
@@ -170,6 +173,8 @@ They fill this out and are helped with their query.
 * Finally there will be a link to help page for any queries
 
 ## Existing Features
+
+- [Table Of Content](#table-of-content)
 
 ### UX Feature
 
@@ -492,6 +497,8 @@ The Market features I want currently are implemented.
 
 ## Technologies Used
 
+- [Table Of Content](#table-of-content)
+
 ### Bootstrap
 Used for the page and specific HTML element styling. Its primary use at the moment is its grid method for page format and look on smaller screens
 
@@ -539,7 +546,10 @@ Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
 ## Credits
-Content
+
+- [Table Of Content](#table-of-content)
+
+## bContent
 I have used lorem for description text to save time for better development
 
 Media
@@ -598,3 +608,5 @@ and it says it is by Madison, no last name is stated.\
 and it doesn't say who it is by.\
 
 Acknowledgements
+
+- [Table Of Content](#table-of-content)
