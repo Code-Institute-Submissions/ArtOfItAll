@@ -1,5 +1,5 @@
-# Table Of Content
-- [Art Of It All - v0.3.6 - Request page made and Footer updated](#art-of-it-all---v036---request-page-made-and-footer-updated)
+# Table OF Content
+- [Art Of It All - v0.3.7 - Basket Added](#art-of-it-all---v04---deployment)
   * [UX](#ux)
   * [Features](#features)
     + [UX Feature](#ux-feature)
@@ -15,7 +15,7 @@
       - [Light/Dark Toggle](#light-dark-toggle)
       - [Grid method throughout all pages using Bootstrap](#grid-method-throughout-all-pages-using-bootstrap)
     + [Home Feature](#home-feature-1)
-      - [Links to Market that refine items visible](#links-to-market-that-refine-items-visible)
+      - [Links to Market that refine items visibly](#links-to-market-that-refine-items-visibly)
       - [Contact page link](#contact-page-link)
       - [Calendar](#calendar)
     + [Market Feature](#market-feature-1)
@@ -23,7 +23,7 @@
       - [A filter](#a-filter)
       - [Clicking the picture](#clicking-the-picture)
     + [Contact Features](#contact-features-1)
-      - [Link to Policies page](#link-to-policies-page)
+      - [Link to the Policies page](#link-to-the-policies-page)
       - [A dropdown with all the different artist and the help department](#a-dropdown-with-all-the-different-artist-and-the-help-department)
       - [A name box for the person using it](#a-name-box-for-the-person-using-it)
       - [The form will have a box that asks for the user's email](#the-form-will-have-a-box-that-asks-for-the-user-s-email)
@@ -39,6 +39,9 @@
     + [Past Art Feature](#past-art-feature-1)
       - [Will have a picture of the requested art in a grid](#will-have-a-picture-of-the-requested-art-in-a-grid)
       - [Example extra info page](#example-extra-info-page)
+    + [Basket](#basket)
+      - [Append to Div to hold all added items](#append-to-div-to-hold-all-added-items)
+      - [Items can be removed from the basket](#items-can-be-removed-from-the-basket)
   * [Features Left to Implement](#features-left-to-implement)
     + [UX Feature](#ux-feature-2)
     + [Home Feature](#home-feature-2)
@@ -55,10 +58,19 @@
     + [Google Font](#google-font)
     + [FullCalendar](#fullcalendar)
   * [Testing](#testing)
+    + [Top Bar Testing](#top-bar-testing)
+    + [Calendar on the home page](#calendar-on-the-home-page)
+    + [Market Filter](#market-filter)
+    + [Footer Resize](#footer-resize)
+    + [Filter selection from dropdown on sideNavMenu](#filter-selection-from-dropdown-on-sidenavmenu)
+    + [Basket](#basket-1)
   * [Deployment](#deployment)
   * [Credits](#credits)
+    + [Content](#content)
+    + [Media](#media)
 
-# Art Of It All - v0.3.7 - Basket Added
+
+# Art Of It All - v0.4 - Deployment
 
 - [Table Of Content](#table-of-content)
 
@@ -97,7 +109,7 @@ will help them start getting noticed in the artist industry. The contact form th
 them will help the artist to understand interactions with customers and will help them learn to handle 
 specific requests from customers. By this, I mean learn how to help customers get there idea created while also letting them know what is achievable.
 
-For the design of the page, I will be using the Bootstrap grid method to make the page look organised and well-spaced. 
+For the design of the page, I will be using the Bootstrap grid method to make the page look organized and well-spaced. 
 It will help with the response to smaller screen sizes for a better layout of all of the features. 
 Also, for the design of the pages, a title will be at the top in the large text. So customers are reassured which page they are on. 
 I hope to reinforce this with the current page highlighted on the navigation.
@@ -183,11 +195,10 @@ They fill this out and are helped with their query.
 
 #### Open button and side navigation
 
-Open button - allows the user to press it and open a navigation that comes accross the side of the left hand side of the page/
-To do this the Javascript code [sideNavMenu.js](assets/js/sideNavMenu.js) was written. It has two simple functions in it, 
-the first is openNav() which sets the width of the side navigation div to 250px and does this with a transition for a smoother movement. 
-The second is closeNav() which does the opsite.
-Side Navigation - allows user to navigate to the other pages on the website, by clicking the page names on this side bar/
+Open button - allows the user to press it and open navigation that comes across the side of the left-hand side of the page/
+The Javascript code [sideNavMenu.js](assets/js/sideNavMenu.js) was written. It has two simple functions in it; the first is openNav() which sets the width of the side navigation div to 250px and does this with a transition for a smoother movement. 
+The second is closeNav() which does the opposite.
+Side Navigation - allows user to navigate to the other pages on the website, by clicking the page names on this sidebar/
 The headers on this div are wrapped in anchor links to the other pages allowing navigation.
 
 #### Light/Dark Toggle
@@ -210,12 +221,12 @@ These have css rules linked to them which change the pages apperance.
 And I use a transiton so background and headers change first then text follows soon after.
 
 #### Grid method throughout all pages using Bootstrap
-To keep a consitant size between all the pages and between the screen sizes I have used Bootstrap grid method to layout my pages, 
-these are in light/dark containers so there style can be changed by the light/dark toggle.
+To keep a consistent size between all the pages and between the screen sizes, I have used Bootstrap grid method to layout my pages, 
+these are in light/dark containers so their style can be changed by the light/dark toggle.
 
 ### Home Feature
 
-#### Links to Market that refine items visible
+#### Links to Market that refine items visibly
 The links open to the market page with a tag word linked to the href. 
 On document being ready the urlCheck.js checks which word has been added and checks the box for the corrisponding item type. 
 Then it calls the filter code which handles the rest.
@@ -229,11 +240,11 @@ $(document).ready(function(){
 ```
 
 #### Contact page link
-This is simply done by h3 with some text, above a h2 which is wrapped in an anchor link to the contact page.
+This is simply done by h3 with some text, above an h2 which is wrapped in an anchor link to the contact page.
 
 #### Calendar
 Artist Selector - the user can select the calendar of the artist they want, they do this by selecting the artist from a dropdown list
-This is done by the [calendar.js](assets/js/calendar.js). All the calendar are hidden till a choice is made. 
+This is done by the [calendar.js](assets/js/calendar.js). All the calendar are hidden until a choice is made. 
 The js waits till the document is ready then builds calendars for all the artist on the list with the data in the js folder, 
 things like events, working times and days off stored as an object in the function.
 ```javascript
@@ -275,8 +286,8 @@ $(document).ready(function () {
 ### Market Feature
 
 #### Picture of the art displayed in a grid
-This is done with Bootstrap, there are 4 colums, 3 are the pictures and one of them is the filter. 
-I have decide to not have the price displayed over the top because on smaller screen sizes it didn't look right.
+This is done with Bootstrap, there are four columns, three are the pictures, and one of them is the filter. 
+I have decided to not have the price displayed over the top because on smaller screen sizes it didn't look right.
 
 #### A filter
 Filter - the user wants only specific images displayed, to do this they click the ones they want to keep
@@ -288,12 +299,12 @@ if the ones above them go they will move up but not sideways.\
 The select and deselect issue has been fixed now. The way this works now is the HTML code calls the function marketFilter() on click.
 ```html
 <li>
-	<label for="chck-box1">Abstract</label>
-	<input data-num="0" class="checkbox" type="checkbox" id="chck-box1" onclick="marketFilter()">
+    <label for="chck-box1">Abstract</label>
+    <input data-num="0" class="checkbox" type="checkbox" id="chck-box1" onclick="marketFilter()">
 </li>
 ```
-Then the function clears all the items on the page with a for loop. Then the second for loop loops through all the checkboxes and checks which ones are check or not, 
-then takes the data-num of the ones who are checked and use this to select the checkbox names that corrispond with the numbers in the filter function.
+Then the function clears all the items on the page with a for a loop. Then the second for loop loops through all the checkboxes and checks which ones are check or not, 
+then takes the data-num of the ones which are checked and use this to select the checkbox names that correspond with the numbers in the filter function.
 Then it goes through the list of names and uses this to select the divs by there class name and sets there display to block.
 ```javascript
 function filters(filter) {
@@ -331,47 +342,47 @@ function marketFilter() {
 ```
 
 #### Clicking the picture
-More information - the user wants more information about the image, they can click them image to be transfered to a page with more information about it
-Currently the links all lead to the same page but in a fully developed version they would all lead to an individual page about the selected picture
+More information - the user wants more information about the image; they can click the image to be transferred to a page with more information about it
+Currently, the links all lead to the same page, but in a fully developed version they would all lead to an individual page about the selected picture
 
 ### Contact Features
 
-#### Link to Policies page
+#### Link to the Policies page
 At the top of the page under the first header is some text about how we want people to treat each other. 
-Under that it suggest that if anyone wants infomation of the etiquette we want or wants to know how the services work, that they should go to the policies page.  
+Under that, it suggests that if anyone wants information about the etiquette we want or wants to know how the services work, that they should go to the policies page.  
 
 #### A dropdown with all the different artist and the help department
 The items on the dropdown hold values that would be taken by the submit and used for the to_email parameter in the EmailJS form template. 
 This is set to be required.
 
 #### A name box for the person using it 
-The top box of the form has the label full name and it has a name value of from_name. This value allows the EmailJS to use this in the template. 
+The top box of the form has the label "full name", and it has a name-value of from_name. This value allows the EmailJS to use this in the template. 
 This is also set to required.
 
 #### The form will have a box that asks for the user's email
-It has a box that askes for the users email, this has the value from_email for the EmailJS template. 
-Also, underneath this form field it reassures customers that we won't share there email or personal details with anyone.
+It has a box that asks for the user's email; this has the value from_email for the EmailJS template. 
+Also, underneath this form field, it reassures customers that we won't share their email or personal details with anyone.
 
 #### Request area, with example text
 The second to last part of the form is the request section, which is taken to the EmailJS as request. 
-In this box is a small example of how to politly ask for there request, just to reinforce the point of being nice and friendly to who ever they are contacting.
+In this box is a small example of how to politely ask for there request, just to reinforce the point of being nice and friendly to whoever they are contacting.
 
 #### One Issue
-This form can't be used because when I enter my id for the initallization it complains that my id is invalded, 
-I have double checked it against the one on the site and it is exactly the same so I am unsure what's wrong.
+This form can't be used because when I enter my id for the initialization, it complains that my id is invalid, 
+I have double-checked it against the one on the site, and it is exactly the same, so I am unsure what's wrong.
 
 ### Policies Features
 
 #### Three boxes with information
-These are in the page, but they are filled with lorem at the moment so I can focus on other features. 
-If I have time before handin this will be filled with the appropriate information.
+These are on the page, but they are filled with lorem at the moment so I can focus on other features. 
+If I have time before handing this will be filled with the appropriate information.
 
 #### The last two boxes will link to respective pages
-This has been made and the links work, these have been styled and the features I want added.
+This has been made, and the links work, these have been styled and the features I want to be added.
 They still need information adding.
 
 #### The top will download a draft contract
-This is linked and works, I downloads the draft-contact.docx held in the [documents](assets/document/draft-contract.docx) folder under assets.
+This is linked and works, I download the draft-contact.docx held in the [documents](assets/document/draft-contract.docx) folder under assets.
 
 ### Footer
 
@@ -380,60 +391,60 @@ The links in footer now connect to the pages I want them to.
 ```html
 <div class="col-sm-4">
     <h5 class="footer-hdr">Social</h5>
-		<ul class="icon">
-			<li>
-				<h6 class="footer-text">@AJokerXDArtnCrafts
-				<a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
-					<i class="fab fa-facebook" aria-hidden="true"></i>
-				</a>
-				</h6>
-		    </li>
-			<li>
-				<h6 class="footer-text">@AJokerxd
-				<a target="_blank" href="https://twitter.com/AJokerxd">
-					<i class="fab fa-twitter" aria-hidden="true"></i>
-			    </a>
-				</h6>
-			</li>
-			<li>
-				<h6 class="footer-text">ajokerxd
-				<a target="_blank" href="https://www.instagram.com/ajokerxd/">
-					<i class="fab fa-instagram" aria-hidden="true"></i>
-				</a>
-				</h6>
-			</li>
-			<li>
-				<h6 class="footer-text">A-JokerXD
-				<a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
-					<i class="fab fa-youtube" aria-hidden="true"></i>
-				</a>
-				</h6>
-			</li>
-			<li>
-				<h6 class="footer-text">AJokerXDYouTube
-				<a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
-					<i class="fab fa-twitch"></i>
-				</a>
-				</h6>
-			</li>
-		</ul>
-	</div>
+        <ul class="icon">
+            <li>
+                <h6 class="footer-text">@AJokerXDArtnCrafts
+                <a target="_blank" href="https://www.facebook.com/AJokerXDArtnCraft/">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+                </h6>
+            </li>
+            <li>
+                <h6 class="footer-text">@AJokerxd
+                <a target="_blank" href="https://twitter.com/AJokerxd">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                </h6>
+            </li>
+            <li>
+                <h6 class="footer-text">ajokerxd
+                <a target="_blank" href="https://www.instagram.com/ajokerxd/">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                </h6>
+            </li>
+            <li>
+                <h6 class="footer-text">A-JokerXD
+                <a target="_blank" href="https://www.youtube.com/channel/UC-Rmhn1NVXVAlxFVGnhR0mA?view_as=">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+                </h6>
+            </li>
+            <li>
+                <h6 class="footer-text">AJokerXDYouTube
+                <a target="_blank" href="https://www.twitch.tv/ajokerxdyoutube">
+                    <i class="fab fa-twitch"></i>
+                </a>
+                </h6>
+            </li>
+        </ul>
+    </div>
 <h6 class="footer-hdr">For more information see here -
-	<ul class="icon">
-	    <li>
-			<a class="footer-text" href="page/policies.html">Contact Policy</a>
-		</li>
-		<li>
-			<a class="footer-text" href="page/policies/requests.html">Request Policy</a>
-		</li>
-		<li>
-			<a class="footer-text" href="page/policies/services.html">Service Practices</a>
-		</li>
-	</ul>
+    <ul class="icon">
+        <li>
+            <a class="footer-text" href="page/policies.html">Contact Policy</a>
+        </li>
+        <li>
+            <a class="footer-text" href="page/policies/requests.html">Request Policy</a>
+        </li>
+        <li>
+            <a class="footer-text" href="page/policies/services.html">Service Practices</a>
+        </li>
+    </ul>
 <ul class="icon">
-	<li>
-		<a class="footer-text" href="page/contact.html">Contact Page</a>
-	</li>
+    <li>
+        <a class="footer-text" href="page/contact.html">Contact Page</a>
+    </li>
 </ul>
 ```
 
@@ -441,33 +452,32 @@ The links in footer now connect to the pages I want them to.
 There is a brief description added to the sections in the footer now.
 ```html
 <div class="col-sm-4">
-	<h5 class="footer-hdr">Policies, Requests and Services</h5>
-	<p class="footer-text">We have a draft contract you can checkout before placing a request order, we also
-		have information on how our requests work and how we'd like you and the artist to talk to each
-		other. Also, we have a page that talks about our service processes and tells you how busy each
-		artist is at the moment.</p>
+    <h5 class="footer-hdr">Policies, Requests and Services</h5>
+    <p class="footer-text">We have a draft contract you can checkout before placing a request order, we also
+        have information on how our requests work and how we'd like you and the artist to talk to each
+        other. Also, we have a page that talks about our service processes and tells you how busy each
+        artist is at the moment.</p>
 </div>
 <div class="col-sm-4">
-	<h5 class="footer-hdr">Help</h5>
-	<p class="footer-text">For help you can send a help request to the help department through the contact
-		page.
-	</p>
+    <h5 class="footer-hdr">Help</h5>
+    <p class="footer-text">For help you can send a help request to the help department through the contact
+        page.
+    </p>
 </div>
 ```
 
 ### Past Art Feature
 
 #### Will have a picture of the requested art in a grid
-This is the same design as the market page with the same filter,
-it differs from the market page as it doesn't say the price and has the customers name on it.
-Finally, it would differs from the market page because the description would be about the request made,
+This is the same design as the market page with the same filter; it differs from the market page as it doesn't say the price and has the customers name on it.
+Finally, it would differ from the market page because the description would be about the request made,
 and less about why the artist made it and their inspiration.
 However, this would be in a live version, as this is for my project it is populated with lorem.
 
 #### Example extra info page
 This is the same as the market one, 
-but again it is differs with the information shown on the page.
-It again has simular information about the customers request and the process and less about the artist thought. 
+but again it differs with the information shown on the page.
+It again has similar information about the customer's request and the process and less about the artist thought. 
 
 ### Basket
 #### Append to Div to hold all added items
@@ -524,22 +534,22 @@ $("#total").html("£" + total)
 - [Table Of Content](#table-of-content)
 
 ### UX Feature
- The UX features I want currently are implemented.
+ The UX features I want currently being implemented.
 
 ### Home Feature
-The Home features I want currently are implemented.
+The Home features I want currently being implemented.
 
 ### Market Feature
-The Market features I want currently are implemented.
+The Market features I want currently being implemented.
 
 ### Policies Features
-The Market features I want currently are implemented.
+The Market features I want currently being implemented.
 
 ### Contact Features
-The Market features I want currently are implemented.
+The Market features I want currently being implemented.
 
 ### Past Art Feature
-The Home features I want currently are implemented.
+The Home features I want currently being implemented.
 
 ### Checkout feature
 * Will have all the items in the current basket
@@ -553,7 +563,7 @@ The Home features I want currently are implemented.
 - [Table Of Content](#table-of-content)
 
 ### Bootstrap
-Used for the page and specific HTML element styling. Its primary use at the moment is its grid method for page format and look on smaller screens
+This is used for the page and specific HTML element styling. Its primary use at the moment is its grid method for page format and look on smaller screens.
 
 ### JQuery
 Used for more effortless Javascript coding and dom manipulation
@@ -562,107 +572,107 @@ Used for more effortless Javascript coding and dom manipulation
 Used to test Javascript code
 
 ### Font-Awesome
-Used for a logo for different navigation links and some titles. Also used for social connections in the footer. Finally used for the dropdown logo on the navigation
+Used for a logo for different navigation links and some titles. Also used for social connections in the footer. Finally used for the dropdown logo on the navigation.
 
 ### Google Font
 Used for the font families for the whole page
 
 ### FullCalendar
-I have used this to add a calendar to the bottom of the home page to show how busy artists are at the moment
+I have used this to add a calendar to the bottom of the home page to show how busy artists are at the moment.
 
 ## Testing
 
 - [Table Of Content](#table-of-content)
 
 ### Top Bar Testing
-Screen Size: I tested its apperance and function using the settings offered by the Chrome inspect feature.\ 
+Screen Size: I tested its appearance and function using the settings offered by the Chrome inspect feature.\ 
 To test how it looked at different screen sizes I changed the device set for the page to display in.\
 I also checked this by reducing chrome window width down to a minimum of 320px and slowly slide up in size to see how it looked.\
-I also tested the top bar features whilst doing these two methods to check that the buttons could be click and respond as expected.\
+I also tested the top bar features whilst doing these two methods to check that the buttons could be clicked and respond as expected.\
 
 Side Navigation: To test this I chose a phone size screen, a tablet size screen and a pc size screen.\ 
 I check that when the Open button was clicked that it called the openNav function from the [sideNavMenu.js](assets/js/sideNavMenu.js), 
 I also tested the same for the closeNav function.\
 Then I tested each link between the pages to test that the link address where correct.
-Finally, I tested the transiton a few time to see if I was happy with the timing.
+Finally, I tested the transition a few time to see if I was happy with the timing.
 
 Light/Dark Toggle: I tested to see if it worked correctly, it didn't seem to have any issues.
-I also checked the transiton times, to see if I was happy with how it effected the content of the page.
+I also checked the transition times to see if I was happy with how it affected the content of the page.
 
 ### Calendar on the home page
-I origanally made a CSS and HTML calendar, but the space that it took up in the index.html document seemed very unessery to me.
-So, I looked for a calendar libary and found FullCalendar to be quite useful.
-1. Fist attempt, it hasn't worked, I used jquery to get the element by id but it didn't work. 
+I originally made a CSS and HTML calendar, but the space that it took up in the index.html document seemed very unnecessary to me.
+So, I looked for a calendar library and found FullCalendar to be quite useful.
+1. The first attempt, it hasn't worked, I used jquery to get the element by id, but it didn't work. 
 I'm going to use normal javascript see if that works
 2. It works correctly with the javascript, 
 I now need to create one with specific information for each artist and hide all of these till a choice is made
 3. With separate ones made for each artist they all display on the page, so I have set them to hide on page loads
 4. I have managed to link the one that shows up with the selected choice and hide the previous select if there was one
-This works how I want it to now, my only conceren is for each artist the is a large object with all their events in.
+This works how I want it to now; my only concern is for each artist the is a large object with all their events in.
 This is an issue for me because it makes the sideNavMenu.js very large, in the future I would like to use a database to hold these.
 
 ### Market Filter
 
-1. I have created my javascript that hide the divs with the class name passed into the function, this works well
-2. After further testing I noticed two things I need to click it on and off to hide things I didn't want and
-if I click multiple choices it hide some
-3. To fix this I change the code so that it goes through all the divs by class name and removes them from display when the function is called.
-Then it take the number of the filter/s selected and grabs the class name from a object in a separate function. 
+1. I have created my javascript that hides the divs with the class name passed into the function; this works well
+2. After further testing, I noticed two things I need to click it on and off to hide things I didn't want and
+if I click multiple choices it hides some
+3. To fix this, I change the code so that it goes through all the divs by class name and removes them from the display when the function is called.
+Then it takes the number of the filter/s selected and grabs the class name from an object in a separate function. 
 Then sets the display of all of the divs with the corresponding class name to be shown.
-4. I tested this one with multiple combinations of choosen filter selections and it works well, 
-it also works for art that has more than one art type. I.e manga portrait will display when either or both are selected
+4. I tested this one with multiple combinations of chosen filter selections, and it works well, 
+it also works for art that has more than one art type. I.e. manga portrait will display when either or both are selected
 
 ### Footer Resize
-I decide to use javascript for this because the css media query wasn't responding how I wanted it to.
-It's simple, it checks for the screen size constantly and if it goes below the set size it will hide the normal one and show the phone one.
-And once it gets larger than the desired screen size then it hides the small screen one and shows the normal one.
-So, to test this I slowly changed the screen size to check it changed at the correct screen size and that it looked okay.
-Whilst testing this I had a issue with the social logos displaying in a list no matter what I did.
+I decide to use javascript for this because the CSS media query wasn't responding to how I wanted it to.
+It's simple, it checks for the screen size constantly, and if it goes below the set size, it will hide the normal one and show the phone one.
+And once it gets larger than the desired screen size, then it hides the small screen one and shows the normal one.
+So, to test this, I slowly changed the screen size to check it changed at the correct screen size and that it looked okay.
+Whilst testing this, I had an issue with the social logos displaying in a list no matter what I did.
 After some research the fix I found to put them in a list-inline div and add each logo as a list-inline-item.
 
 ### Filter selection from dropdown on sideNavMenu
-I want users to be able to select what type of art they want display on the market from other pages.
-The way I want to do this is with a dropdown that sites next to the market link on the side navigation, 
-these will have URL links with parameters for each filter choice.
-1. Have managed to add a dropdown using a arrow facing downwards as the logo next to the market, 
-these have been tested and work, the url have the parameter on the end as wanted
-2. I check that the url parameter could be grabbed, to do this I console.log it till I got the result I needed, 
+I want users to be able to select what type of art they want to display on the market from other pages.
+The way I want to do this is with a dropdown that sites next to the market link on the side navigation; these will have URL links with parameters for each filter choice.
+1. Have managed to add a dropdown using an arrow facing downwards as the logo next to the market; these have been tested and work, the URL has the parameter on the end as wanted
+2. I check that the URL parameter could be grabbed, to do this I console.log it till I got the result I needed, 
 a few tweaks on how I was retrieving it was done
-3. Then I liked them to the filters and click them and call the function linked to the filter choice, 
-I tested this by using the dropdown menu from different pages to test all links and the functions functionality
+3. Then I liked them to the filters and clicked them and call the function linked to the filter choice, 
+I tested this by using the dropdown menu from different pages to test all links and the functionality of the functions
 
 ### Basket
 I created a function that held all the product prices and names. 
-The plus calls the function that calls this information finction and uses this information to append a new item under basket.
-The name is appended to the left, price in the middle and a subtract button to the right.
-The price is added to current total then replaces the total on the page.
-1. Adding item with the plus button - it works fine, the total adds correctly and the information about the item is appended under the last one
-2. Remove item with the subtract - it works but if items have the same product name it will remove both and it makes the total wrong
-3. In an attmept to fix this each one has a random number, this random number is generated for each new item appended. 
+The plus calls the function that calls this information function and uses this information to append a new item under the basket.
+The name is appended to the left, price in the middle, and a subtract button to the right.
+The price is added to the current total then replaces the total on the page.
+1. Adding item with the plus button - it works fine, the total adds correctly, and the information about the item is appended under the last one
+2. Remove the item with the subtract - it works, but if items have the same product name it will remove both, and it makes the total wrong
+3. In an attempt to fix this, each one has a random number; this random number is generated for each new item appended. 
 This is used to target the elements that are wanted empty
-4. When taking away from the price that works but adding new items adds to the orignal value - to fix this I have set the value of the total in the html div.
-Then gotton the value and added to it and updated the html, so the total is always stored and gathered after each add or subtract  
-This all works as wanted now, the checkout button isn't linked to anything yet.
+4. When taking away from the price that works but adding new items adds to the original value - to fix this I have set the value of the total in the HTML div.
+Then gotten the value and added to it and updated the HTML, so the total is always stored and gathered after each add or subtract  
+This all works as wanted now; the checkout button isn't linked to anything yet.
 
 ## Deployment
 
 - [Table Of Content](#table-of-content)
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+I had set up the GitHub page at the beginning of the site, before handing in I have checked how the deployed version looks.
+For deployment, I have information and description sections populated by lorem to show how the features should work in a fully deployed version.
+In a full deployment, the market art and requested art would have a page with information about the artist, 
+the method and the artist reason behind the image(request details for requested art).
+I have run out of time to complete this, but in full deployment, 
+the checkout would lead to another page with all the products from the basket there, and the price added together. 
+On this page would be a way to pay, google pay or PayPal.
+In a full deployment, I would like the basket to be stored to the cache so the customer could leave the page and still have their basket remembered.
+This deployment is run in a second branch for submitting.
 
 ## Credits
 
 - [Table Of Content](#table-of-content)
 
 ### Content
-I have used lorem for description text to save time for better development
+I have use lorem for description text to save time for better development
+I have to use w3school.com for learning how to implement what I want to do.
 
 ### Media
 The pictures for this page where obtained from Google search\
