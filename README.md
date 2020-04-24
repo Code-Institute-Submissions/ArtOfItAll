@@ -71,7 +71,7 @@
 
 
 # Art Of It All - v0.4 - Deployment
-
+## During Deployment Jquery started not working properly this may largely affect the project
 - [Table Of Content](#table-of-content)
 
 The idea of this is displaying art from different artists for sale. 
