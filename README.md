@@ -58,7 +58,7 @@
   * [Deployment](#deployment)
   * [Credits](#credits)
 
-# Art Of It All - v0.3.6 - Request page made and Footer updated
+# Art Of It All - v0.3.7 - Basket Added
 
 - [Table Of Content](#table-of-content)
 
