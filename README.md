@@ -59,6 +59,9 @@
   * [Credits](#credits)
 
 # Art Of It All - v0.3.6 - Request page made and Footer updated
+
+- [Table Of Content](#table-of-content)
+
 The idea of this is displaying art from different artists for sale. 
 Also, allowing customers to make personal requests for pieces of art they would like made. 
 The site would also be an opportunity to help the artist get a foothold in the industry, 
@@ -466,7 +469,59 @@ This is the same as the market one,
 but again it is differs with the information shown on the page.
 It again has simular information about the customers request and the process and less about the artist thought. 
 
+### Basket
+#### Append to Div to hold all added items
+The user can use the plus button to add an item to the basket at the top of the market page. 
+When the plus is clicked it calls the function addBasket with the products name.
+```html
+<i class="far fa-plus-square" onclick="addBasket('product1')"></i>
+```
+Then the function takes the product name to grab the product info from a function holding all the product infomation.
+```javascript
+function addBasket(productInfo){
+    var product = products(productInfo)
+    var price = product["productPrice"]
+```
+The function grabs the current total from the div element #total. Then the price variables and the total is added together.
+Also, a random number is created for each new basket product to allow targeting later.
+```javascript
+    var total = document.getElementById('total').textContent
+    var prodNum = Math.random()
+    total = total.substring(1)
+    total = parseInt(total)
+    total = total + price
+```
+Then all this information is added to the page.
+```javascript
+    $("#basket1").append("<h4 class='body-text " + prodNum + "'>" + product["productName"] + "</h4>")
+    $("#basket2").append("<h4 class='body-text " + prodNum + "'>£" + product["productPrice"] + "</h4>")
+    $("#basket3").append("<h4 class='body-text " + prodNum + "'><i id='remove' class='far fa-minus-square' data-prodnum=" + prodNum + " data-prod=" + productInfo + " onclick='remove()'></i></h4>")
+    $("#total").html("£" + total)
+```
+
+#### Items can be removed from the basket
+It first grabs the product name form the data-prod, then uses this to get the price of the product. 
+And it grabs the product number using the data-prodnum.
+```javascript
+function remove(){
+    var prod = $("#remove").data("prod")
+    var prodNum = $("#remove").data("prodnum")
+    var total = document.getElementById('total').textContent
+    total = total.substring(1)
+    var product = products(prod)
+    var price = product["productPrice"]
+    total = total - price
+```
+Then it changes the page with the new total and removing the product.
+```javascript
+$("#total").html("£" + total)
+    var removeProd = document.getElementsByClassName(prodNum)
+    $(removeProd).empty()
+```
+
 ## Features Left to Implement
+
+- [Table Of Content](#table-of-content)
 
 ### UX Feature
  The UX features I want currently are implemented.
@@ -476,7 +531,6 @@ The Home features I want currently are implemented.
 
 ### Market Feature
 The Market features I want currently are implemented.
-* Constantly updating basket at the top of the page, with a checkout button next to it
 
 ### Policies Features
 The Market features I want currently are implemented.
@@ -485,8 +539,7 @@ The Market features I want currently are implemented.
 The Market features I want currently are implemented.
 
 ### Past Art Feature
-* Will have a picture of the requested art in a grid
-* Under the pictures will the artist, the buyer and a description
+The Home features I want currently are implemented.
 
 ### Checkout feature
 * Will have all the items in the current basket
@@ -518,24 +571,83 @@ Used for the font families for the whole page
 I have used this to add a calendar to the bottom of the home page to show how busy artists are at the moment
 
 ## Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+- [Table Of Content](#table-of-content)
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### Top Bar Testing
+Screen Size: I tested its apperance and function using the settings offered by the Chrome inspect feature.\ 
+To test how it looked at different screen sizes I changed the device set for the page to display in.\
+I also checked this by reducing chrome window width down to a minimum of 320px and slowly slide up in size to see how it looked.\
+I also tested the top bar features whilst doing these two methods to check that the buttons could be click and respond as expected.\
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Side Navigation: To test this I chose a phone size screen, a tablet size screen and a pc size screen.\ 
+I check that when the Open button was clicked that it called the openNav function from the [sideNavMenu.js](assets/js/sideNavMenu.js), 
+I also tested the same for the closeNav function.\
+Then I tested each link between the pages to test that the link address where correct.
+Finally, I tested the transiton a few time to see if I was happy with the timing.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+Light/Dark Toggle: I tested to see if it worked correctly, it didn't seem to have any issues.
+I also checked the transiton times, to see if I was happy with how it effected the content of the page.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+### Calendar on the home page
+I origanally made a CSS and HTML calendar, but the space that it took up in the index.html document seemed very unessery to me.
+So, I looked for a calendar libary and found FullCalendar to be quite useful.
+1. Fist attempt, it hasn't worked, I used jquery to get the element by id but it didn't work. 
+I'm going to use normal javascript see if that works
+2. It works correctly with the javascript, 
+I now need to create one with specific information for each artist and hide all of these till a choice is made
+3. With separate ones made for each artist they all display on the page, so I have set them to hide on page loads
+4. I have managed to link the one that shows up with the selected choice and hide the previous select if there was one
+This works how I want it to now, my only conceren is for each artist the is a large object with all their events in.
+This is an issue for me because it makes the sideNavMenu.js very large, in the future I would like to use a database to hold these.
+
+### Market Filter
+
+1. I have created my javascript that hide the divs with the class name passed into the function, this works well
+2. After further testing I noticed two things I need to click it on and off to hide things I didn't want and
+if I click multiple choices it hide some
+3. To fix this I change the code so that it goes through all the divs by class name and removes them from display when the function is called.
+Then it take the number of the filter/s selected and grabs the class name from a object in a separate function. 
+Then sets the display of all of the divs with the corresponding class name to be shown.
+4. I tested this one with multiple combinations of choosen filter selections and it works well, 
+it also works for art that has more than one art type. I.e manga portrait will display when either or both are selected
+
+### Footer Resize
+I decide to use javascript for this because the css media query wasn't responding how I wanted it to.
+It's simple, it checks for the screen size constantly and if it goes below the set size it will hide the normal one and show the phone one.
+And once it gets larger than the desired screen size then it hides the small screen one and shows the normal one.
+So, to test this I slowly changed the screen size to check it changed at the correct screen size and that it looked okay.
+Whilst testing this I had a issue with the social logos displaying in a list no matter what I did.
+After some research the fix I found to put them in a list-inline div and add each logo as a list-inline-item.
+
+### Filter selection from dropdown on sideNavMenu
+I want users to be able to select what type of art they want display on the market from other pages.
+The way I want to do this is with a dropdown that sites next to the market link on the side navigation, 
+these will have URL links with parameters for each filter choice.
+1. Have managed to add a dropdown using a arrow facing downwards as the logo next to the market, 
+these have been tested and work, the url have the parameter on the end as wanted
+2. I check that the url parameter could be grabbed, to do this I console.log it till I got the result I needed, 
+a few tweaks on how I was retrieving it was done
+3. Then I liked them to the filters and click them and call the function linked to the filter choice, 
+I tested this by using the dropdown menu from different pages to test all links and the functions functionality
+
+### Basket
+I created a function that held all the product prices and names. 
+The plus calls the function that calls this information finction and uses this information to append a new item under basket.
+The name is appended to the left, price in the middle and a subtract button to the right.
+The price is added to current total then replaces the total on the page.
+1. Adding item with the plus button - it works fine, the total adds correctly and the information about the item is appended under the last one
+2. Remove item with the subtract - it works but if items have the same product name it will remove both and it makes the total wrong
+3. In an attmept to fix this each one has a random number, this random number is generated for each new item appended. 
+This is used to target the elements that are wanted empty
+4. When taking away from the price that works but adding new items adds to the orignal value - to fix this I have set the value of the total in the html div.
+Then gotton the value and added to it and updated the html, so the total is always stored and gathered after each add or subtract  
+This all works as wanted now, the checkout button isn't linked to anything yet.
 
 ## Deployment
+
+- [Table Of Content](#table-of-content)
+
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
@@ -549,10 +661,10 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 - [Table Of Content](#table-of-content)
 
-## bContent
+### Content
 I have used lorem for description text to save time for better development
 
-Media
+### Media
 The pictures for this page where obtained from Google search\
 [paint1.jpg](assets/img/portraits/paint1.jpg) was on [Pinterest](https://www.pinterest.co.uk/pin/327707310359626455/?autologin=true) 
 and it says it's by Nikos Gyftakis.\

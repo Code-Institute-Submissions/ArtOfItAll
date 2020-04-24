@@ -65,7 +65,7 @@
 		<!---Light/Dark Mode Button End--->
 		<div class="col-1">
 			<div class="fan-login-container">
-				<button class="fan-login" data-toggle="modal" data-target="#loginmodal">Login</button>
+				<button class="fan-login">Login</button>
 			</div>
 		</div>
 	</div>
@@ -78,6 +78,17 @@
 	</div>
 	<div class="l-d-container">
 		<h2 class="body-hdr">Basket <i class="fas fa-shopping-basket"></i></h2>
+		<p class="body-text">Click the plus to add items to the basket and the minus to remove them.</p>
+		<div class="row">
+			<div class="col-4" id="basket1"></div>
+			<div class="col-4" id="basket2"></div>
+			<div class="col-4" id="basket3"></div>
+		</div>
+        <div class="row">
+            <div class="col-4"><h5 class="body-hdr">Total: </h5></div>
+            <div class="col-4 body-text" id="total">£0</div>
+            <div class="col-4"><button class="">Checkout</button></div>
+        </div>
 	</div>
 	<div class="l-d-container">
 		<div class="row">
@@ -85,9 +96,10 @@
 				<div class="container landscape">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/landscapes/landscape1.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£101</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product1')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -98,9 +110,10 @@
 				<div class="container landscape">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/landscapes/landscape2.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£102</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product2')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -111,9 +124,10 @@
 				<div class="container landscape">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/landscapes/landscape3.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£103</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product3')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -163,9 +177,10 @@
 				<div class="container landscape">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/landscapes/landscape4.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£104</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product4')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -176,9 +191,10 @@
 				<div class="container cartoon">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/cartoon1.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£105</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product5')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -189,9 +205,10 @@
 				<div class="container cartoon portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/cartoon2.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£106</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product6')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -206,9 +223,10 @@
 				<div class="container cartoon portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/cartoon3.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£107</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product7')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -219,9 +237,10 @@
 				<div class="container manga">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/manga1.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£108</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product8')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -232,9 +251,10 @@
 				<div class="container manga portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/manga2.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£109</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product9')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -250,9 +270,10 @@
 				<div class="container manga portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/manga-cartoons/manga3.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£110</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product10')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -263,9 +284,10 @@
 				<div class="container abstract portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/abstract1.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£111</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product11')"></i>
+					</h3>
 					<p class="body-text  market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -276,9 +298,10 @@
 				<div class="container abstract portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/abstract2.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£112</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product12')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -294,9 +317,10 @@
 				<div class="container portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/portrait3.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£113</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product13')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						el saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -307,9 +331,10 @@
 				<div class="container paint portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/paint2.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£114</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product14')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
@@ -320,9 +345,10 @@
 				<div class="container portrait">
 					<a href="example-pic-page.html">
 						<img class="market-image" src="../assets/img/portraits/portrait1.jpg">
-						<div class="body-text">£Price</div>
+						<div class="body-text">£115</div>
 					</a>
-					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket()"></i></h3>
+					<h3 class="body-hdr">Artist Name <i class="far fa-plus-square" onclick="addBasket('product15')"></i>
+					</h3>
 					<p class="body-text market-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 						Tenetur reiciendis sit fugit, minus repellat quasi sequi dolor reprehenderit dolorem,
 						vel saepe commodi aliquid itaque fuga dolorum iste earum, vitae libero?
